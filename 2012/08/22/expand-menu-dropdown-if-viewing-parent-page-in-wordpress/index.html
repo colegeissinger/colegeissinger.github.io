@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Expand Menu Dropdown if viewing parent page in WordPress | Cole Geissinger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Today I was faced with auto expanding a sidebar drop down if we were viewing that parent&amp;nbsp;category. In the past, at other design firms I have worked for, our solution was a complicated JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Expand Menu Dropdown if viewing parent page in WordPress">
+<meta property="og:url" content="http://colegeissinger.com/2012/08/22/expand-menu-dropdown-if-viewing-parent-page-in-wordpress/index.html">
+<meta property="og:site_name" content="Cole Geissinger">
+<meta property="og:description" content="Today I was faced with auto expanding a sidebar drop down if we were viewing that parent&amp;nbsp;category. In the past, at other design firms I have worked for, our solution was a complicated JavaScript">
+<meta property="og:updated_time" content="2016-01-05T03:37:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Expand Menu Dropdown if viewing parent page in WordPress">
+<meta name="twitter:description" content="Today I was faced with auto expanding a sidebar drop down if we were viewing that parent&amp;nbsp;category. In the past, at other design firms I have worked for, our solution was a complicated JavaScript">
+<meta name="twitter:creator" content="@colegeissinger">
+  
+  
+    <link rel="icon" href="favicon.png">
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-8990836-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo" style="background-image: url(/css/images/cole-geissinger-logo.png)"></i><span class="site-title">Cole Geissinger</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/.">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.gravatar.com/avatar/d298ef89fdd12d26cc14b9bf0cdec7aa"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+      
+      <div id="search-form-wrap">
+        
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://colegeissinger.com"></form>
+        
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+          <td><a class="main-nav-link" href="/.">Home</a></td>
+        
+          <td><a class="main-nav-link" href="/archives">Archives</a></td>
+        
+          <td><a class="main-nav-link" href="/categories">Categories</a></td>
+        
+          <td><a class="main-nav-link" href="/tags">Tags</a></td>
+        
+          <td><a class="main-nav-link" href="/about">About</a></td>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://colegeissinger.com"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.gravatar.com/avatar/d298ef89fdd12d26cc14b9bf0cdec7aa">
+      <h2 id="name">Cole Geissinger</h2>
+      <h3 id="title">CTO @ CropMobster</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Santa Rosa, CA</span>
+      <a id="follow" href="https://github.com/colegeissinger">FOLLOW</a>
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        26
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        30
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="https://github.com/colegeissinger" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="https://twitter.com/ColeGeissinger" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+          
+          <td><a href="https://www.facebook.com/cole.geissinger" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+    
+    
+  </div>
+</aside>
+
+      
+      <section id="main"><article id="post-expand-menu-dropdown-if-viewing-parent-page-in-wordpress" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Expand Menu Dropdown if viewing parent page in WordPress
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/08/22/expand-menu-dropdown-if-viewing-parent-page-in-wordpress/">
+      <time datetime="2012-08-22T18:32:35.000Z" itemprop="datePublished">08.22.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Javascript/Tutorial/">Tutorial</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Today I was faced with auto expanding a sidebar drop down if we were viewing that parent&nbsp;category. In the past, at other design firms I have worked for, our solution was a complicated JavaScript URL sniffer that would match the current URL to the URL found in the menu. That never settled well with me. So I sought out to figure out a better way to do so.</p>
+<p><a href="http://jsfiddle.net/colegeissinger/ZrQ8h/1/" target="_blank" rel="external">Check out the demo at jsFiddle</a>. I’ll have an actual Demo and option to download the Source in time, after I have found the time at least :P</p>
+<h2 id="Generate_the_HTML_from_wp_list_categories_28_29"><a href="#Generate_the_HTML_from_wp_list_categories_28_29" class="headerlink" title="Generate the HTML from wp_list_categories()"></a>Generate the HTML from wp_list_categories()</h2><p>What I found is good ol’ WordPress already takes care of this for us. So let’s say we are using the&nbsp;_wp_list<em>categories</em> function to list out all categories. In this very instance, I am building a <a href="http://www.woothemes.com/woocommerce/" target="_blank" rel="external">Woocommerce</a> site so my code looks like this:</p>
+<p><pre class="brush: php; gutter: true">&amp;lt;ul id=&quot;side-menu&quot;&amp;gt;<br>    &lt;!–?php wp_list_categories(&#039;taxonomy=product_cat&amp;orderby=slug&amp;order=ASC&amp;exclude=23,22,21&amp;title_li=&#039;); ?–&gt;<br>&lt;!–[END #side-menu]–&gt;</pre><br>To summarize what is going on here, I am requesting all categories in the <a href="http://codex.wordpress.org/Taxonomies#Custom_Taxonomies" target="_blank" rel="external">custom taxonomy</a> _product<em>cat</em>, this is set up from Woocommerce by default, and ordering all categories in that taxonomy to be sorted in alphabetical order by the slug, or URL. We are also excluding out three categories and leaving the title blank.</p>
+<p>This will then return HTML like this:</p>
+<p><pre class="brush: html; gutter: true">&amp;lt;ul id=&quot;side-menu&quot;&amp;gt;<br>&lt;ul&gt;<br>    &lt;li class=&quot;cat-item cat-item-33&quot;&gt;&lt;a title=&quot;View all posts filed under Category 1&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-1/&quot;&gt;Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-1/&quot;&gt;Category</a> 1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class=&quot;cat-item cat-item-16 current-cat&quot;&gt;&lt;a title=&quot;View all posts filed under Category 2&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2&quot;&gt;Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2&quot;&gt;Category</a> 2&lt;/a&gt;<br>&lt;ul class=&quot;children&quot;&gt;<br>    &lt;li class=&quot;cat-item cat-item-17&quot;&gt;&lt;a title=&quot;View all posts filed under Sub-Category 1&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2/sub-category-1&quot;&gt;Sub-Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2/sub-category-1&quot;&gt;Sub-Category</a> 1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class=&quot;cat-item cat-item-17&quot;&gt;&lt;a title=&quot;View all posts filed under Sub-Category 2&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category</a> 1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class=&quot;cat-item cat-item-17&quot;&gt;&lt;a title=&quot;View all posts filed under Sub-Category 2&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category</a> 2&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/li&gt;<br>&lt;/ul&gt;</pre><br>All the classes here are WordPress generated and 99% of these are not relevant to making this functionality work, but I included them here so you have a good idea of what our generated code will look like. Now the beauty of this function is that it auto adds two classes called “<em>current-cat</em>“ or “<em>current-cat-parent</em>“ to the category we are currently viewing as shown in Line 3 above. The second class listed will be applied to the parent category if we are viewing a sub-category. We’ll make use of this also in our jQuery. AWESOME! We can use these classes in our jQuery code that we use for expanding and contracting our sub-categories.</p>
+<h2 id="Add_the_jQuery"><a href="#Add_the_jQuery" class="headerlink" title="Add the jQuery"></a>Add the jQuery</h2><p>Now that we have our HTML generated we need to build the jQuery menu. This is pretty straight forward really.</p>
+<p><pre class="brush: javascript; gutter: true">jQuery(document).ready(function($) {<br>    $(&#039;#side-menu &gt; li &gt; ul&#039;).hide().click(function(e) {<br>        e.stopPropagation();<br>    });</pre></p>
+<pre><code>var current_cat = $(&amp;#039;#side-menu &amp;gt; li.current-cat, #side-menu &amp;gt; li.current-cat-parent&amp;#039;);
+
+if(current_cat.length == 1) {
+    current_cat.children(&amp;#039;ul&amp;#039;).slideDown();
+}
+
+$(&amp;#039;#side-menu &amp;gt; li &amp;gt; ul.children&amp;#039;).each(function() {
+    $(this).parent().toggle(function() {
+    $(this).find(&amp;#039;ul&amp;#039;).slideDown();
+}, function() {
+    $(this).find(&amp;#039;ul&amp;#039;).slideUp();
+});    
+});
+</code></pre><p>});<br>Let’s explain the code above..</p>
+<ol>
+<li>First we wrap our code in the Document Ready wrapper. This will execute our script after the DOM has loaded. Since WordPress by default runs jQuery in no Conflict mode, I like to specify it first by calling the jQuery handle and then defining the dollar symbol in the function field so I can use the shorter version in my script.</li>
+<li>Next we select each sub-category UL and hide them. We also remove the default function of the a tag on these elements so they don’t try to redirect the page when we want to view the sub-categories.</li>
+<li>We then setup a variable called _current<em>cat</em> which will holde our DOM selections. We’ll select two spots, when the class <em>current-cat</em> or <em>current-cat-parent</em> are present.</li>
+<li>Next we’ll check to see if any of our classes are present in the DOM by calling our current_cat variable and checking if it is present. If so, we then <em>slideDown</em> the child UL element.</li>
+<li>Now we’ll animate our sub-categories to expand down when clicked. We’ll first select each UL with a class of <em>children</em> and tell it to <em>slideDown</em> when clicked, and if we click it again we’ll <em>slideUp</em> to hide the sub-categories again.<br>And there we have it! Of course you can add some CSS to give it styling, but it’s not required to make this feature run. You can <a href="http://jsfiddle.net/colegeissinger/ZrQ8h/1/" target="_blank" rel="external">check out the demo at jsFiddle</a> and you can grab the CSS there for base styling if you wish. I’ll eventually update this to have a Demo and an option to download the Source. This is my first article that I needed this option and will have to investigate further to make this happen properly when I have the time :P</li>
+</ol>
+<p>Leave your comments if you have any!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/08/22/expand-menu-dropdown-if-viewing-parent-page-in-wordpress/" data-id="cij119tl6002p0rv2dmjhgfbo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/09/12/the-weekly-word/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          The Weekly Word
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/07/30/wordpress-workshops-aug-2012/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Upcoming WordPress Presentations and Work Shops</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/04/01/php-interfaces/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_thumb,f_auto,w_141/v1451972166/php-interfaces_t1edyb.png)" alt="PHP Interfaces" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+              <p class="item-title"><a href="/2015/04/01/php-interfaces/" class="title">PHP Interfaces</a></p>
+              <p class="item-date"><time datetime="2015-04-02T01:58:34.000Z" itemprop="datePublished">04.01.2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/04/01/build-hollow-box-css3/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_scale,f_auto,w_80/v1451972858/hollow-box-css3_fode75.png)" alt="Build A Hollow Box with CSS3" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2014/04/01/build-hollow-box-css3/" class="title">Build A Hollow Box with CSS3</a></p>
+              <p class="item-date"><time datetime="2014-04-02T06:08:40.000Z" itemprop="datePublished">04.01.2014</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/02/15/professional-wordpress-development-environments/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_center,h_80,w_80/v1451973585/wordpress-professional-tools_algehj.jpg)" alt="Professional WordPress Development Environments" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2014/02/15/professional-wordpress-development-environments/" class="title">Professional WordPress Development Environments</a></p>
+              <p class="item-date"><time datetime="2014-02-15T20:39:22.000Z" itemprop="datePublished">02.15.2014</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2013/07/02/adding-custom-post-types-to-omnisearch-in-jetpack/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_center,h_80,w_80/v1451973871/omnisearch-jetpack_rwawkz.png)" alt="Adding Custom Post Types to Omnisearch in Jetpack" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2013/07/02/adding-custom-post-types-to-omnisearch-in-jetpack/" class="title">Adding Custom Post Types to Omnisearch in Jetpack</a></p>
+              <p class="item-date"><time datetime="2013-07-03T06:05:57.000Z" itemprop="datePublished">07.02.2013</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2013/04/14/where-art-thou/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_east,h_80,w_80/v1451974471/where-art-thou_u9lu7w.jpg)" alt="Where Art Thou?" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2013/04/14/where-art-thou/" class="title">Where Art Thou?</a></p>
+              <p class="item-date"><time datetime="2013-04-14T18:24:05.000Z" itemprop="datePublished">04.14.2013</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/">Misc</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/Weekly-Word/">Weekly Word</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Plugins/">Plugins</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Quick-Tips/">Quick Tips</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Quick-Tips/Tutorial/">Tutorial</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Themes/">Themes</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Themes/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Weekly-Word/">Weekly Word</a><span class="category-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Announcements/">Announcements</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BuddyPress/">BuddyPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Classes/">Classes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Education/">Education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Presentations/">Presentations</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WooThemes/">WooThemes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress-Admin/">WordPress Admin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress-Editor/">WordPress Editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work-Shops/">Work Shops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/child-pages/">child pages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/child-theme/">child theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functions/">functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/htaccess/">htaccess</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jetpack/">jetpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/login-screen/">login screen</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/navigation/">navigation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/quick-tip/">quick tip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screencast/">screencast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">security</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shortcodes/">shortcodes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url-rewrites/">url rewrites</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Announcements/" style="font-size: 10px;">Announcements</a> <a href="/tags/BuddyPress/" style="font-size: 10px;">BuddyPress</a> <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/Classes/" style="font-size: 10px;">Classes</a> <a href="/tags/Education/" style="font-size: 10px;">Education</a> <a href="/tags/Presentations/" style="font-size: 10px;">Presentations</a> <a href="/tags/WooThemes/" style="font-size: 10px;">WooThemes</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/WordPress-Admin/" style="font-size: 10px;">WordPress Admin</a> <a href="/tags/WordPress-Editor/" style="font-size: 10px;">WordPress Editor</a> <a href="/tags/Work-Shops/" style="font-size: 10px;">Work Shops</a> <a href="/tags/child-pages/" style="font-size: 10px;">child pages</a> <a href="/tags/child-theme/" style="font-size: 10px;">child theme</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/functions/" style="font-size: 10px;">functions</a> <a href="/tags/htaccess/" style="font-size: 15px;">htaccess</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/jetpack/" style="font-size: 10px;">jetpack</a> <a href="/tags/login-screen/" style="font-size: 10px;">login screen</a> <a href="/tags/navigation/" style="font-size: 10px;">navigation</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/quick-tip/" style="font-size: 10px;">quick tip</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/screencast/" style="font-size: 10px;">screencast</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/shortcodes/" style="font-size: 10px;">shortcodes</a> <a href="/tags/url-rewrites/" style="font-size: 10px;">url rewrites</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2000 - 2016 Cole Geissinger<br>
+      Proudly powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

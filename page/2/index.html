@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Cole Geissinger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="WordPress, React/Flux and anything to do with PHP/JavaScript">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cole Geissinger">
+<meta property="og:url" content="http://colegeissinger.com/page/2/index.html">
+<meta property="og:site_name" content="Cole Geissinger">
+<meta property="og:description" content="WordPress, React/Flux and anything to do with PHP/JavaScript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cole Geissinger">
+<meta name="twitter:description" content="WordPress, React/Flux and anything to do with PHP/JavaScript">
+<meta name="twitter:creator" content="@colegeissinger">
+  
+  
+    <link rel="icon" href="favicon.png">
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-8990836-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo" style="background-image: url(/css/images/cole-geissinger-logo.png)"></i><span class="site-title">Cole Geissinger</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/.">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.gravatar.com/avatar/d298ef89fdd12d26cc14b9bf0cdec7aa"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+      
+      <div id="search-form-wrap">
+        
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://colegeissinger.com"></form>
+        
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+          <td><a class="main-nav-link" href="/.">Home</a></td>
+        
+          <td><a class="main-nav-link" href="/archives">Archives</a></td>
+        
+          <td><a class="main-nav-link" href="/categories">Categories</a></td>
+        
+          <td><a class="main-nav-link" href="/tags">Tags</a></td>
+        
+          <td><a class="main-nav-link" href="/about">About</a></td>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://colegeissinger.com"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.gravatar.com/avatar/d298ef89fdd12d26cc14b9bf0cdec7aa">
+      <h2 id="name">Cole Geissinger</h2>
+      <h3 id="title">CTO @ CropMobster</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Santa Rosa, CA</span>
+      <a id="follow" href="https://github.com/colegeissinger">FOLLOW</a>
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        26
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        30
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="https://github.com/colegeissinger" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="https://twitter.com/ColeGeissinger" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+          
+          <td><a href="https://www.facebook.com/cole.geissinger" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+    
+    
+  </div>
+</aside>
+
+      
+      <section id="main">
+      <article id="post-wordpress-shortcode-api-crash-course" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/12/wordpress-shortcode-api-crash-course/">WordPress Shortcode API Crash Course</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/11/12/wordpress-shortcode-api-crash-course/">
+      <time datetime="2012-11-13T06:15:11.000Z" itemprop="datePublished">11.12.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>I have decided to spice things up by doing video tutorials! For my first video tut, I decided to tackle the Shortcode API within WordPress.</p>
+<p>Shortcodes are like little snippets that can bring some extreme power to any WordPress install. These can be created in either themes or plugins and can be as simple as injecting a sentence into the WordPress editor, or bring complex content creations.</p>
+<p>In the very first video tutorial, we’ll dive into the Shortcode API and create a two column layout so we can bring more layout options for our content. Check out the video below to learn more!</p>
+<h2 id="WordPress_Shortcodes_API"><a href="#WordPress_Shortcodes_API" class="headerlink" title="WordPress Shortcodes API"></a>WordPress Shortcodes API</h2><p><a href="http://youtu.be/rAUXZMEHCdM" target="_blank" rel="external">http://youtu.be/rAUXZMEHCdM</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/11/12/wordpress-shortcode-api-crash-course/" data-id="cij119tk0000q0rv2sxokzqv3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress-Editor/">WordPress Editor</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/screencast/">screencast</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/shortcodes/">shortcodes</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-wordpress-jetpack-2-0-packs-a-punch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/11/08/wordpress-jetpack-2-0-packs-a-punch/">WordPress Jetpack 2.0 packs a punch!</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/11/08/wordpress-jetpack-2-0-packs-a-punch/">
+      <time datetime="2012-11-08T19:42:37.000Z" itemprop="datePublished">11.08.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Plugins/">Plugins</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><a href="http://www.colegeissinger.com/wp-content/uploads/2012/11/jetpack-2.0.jpg" target="_blank" rel="external"><img src="http://www.colegeissinger.com/wp-content/uploads/2012/11/jetpack-2.0.jpg" alt="WordPress Jetpack 2.0 packs a punch!" title="WordPress Jetpack 2.0 packs a punch!"></a></p>
+<h2 id="It_u2019s_official"><a href="#It_u2019s_official" class="headerlink" title="It’s official"></a>It’s official</h2><p>Automattic, the company behind WordPress, has officially released version 2 of their popular plugin, <a href="http://www.jetpack.me" title="Jetpack Main Websites" target="_blank" rel="external">Jetpack</a>. For those not in the know, “Jetpack is a WordPress plugin that supercharges your self-hosted WordPress site with the awesome cloud power of WordPress.com.” This statement couldn’t be any more true in the latest version.</p>
+<h2 id="Highlights"><a href="#Highlights" class="headerlink" title="Highlights"></a>Highlights</h2><p>Let’s take a look at some of the new features now available. These features range from content syndication to your social networks all the way to free image hosting via WordPress.com’s CDN (Content Delivery Network).</p>
+<h3 id="Publicize"><a href="#Publicize" class="headerlink" title="Publicize"></a>Publicize</h3><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/11/jetpack-publicize.png" alt="Jetpack Publicize" title="Jetpack Publicize"></p>
+<p>For a while, I have been so unhappy with syndicating my content or clients content to their social networks such as Facebook and Twitter. Sure, there are plugins out there, there are API’s a developer can use, but nothing ever functioned as I needed them to or how I liked. Now with Publicize in Jetpack, WordPress will do that for you! So far, in my testings, it works just as I have always needed from the many alternatives in the wild. Actually, if you came to this post from either my Facebook or Twitter accounts, I used this very feature to do so!</p>
+<p>One of my biggest gripes with the social media publication plugins out there is they offered too much, or they offered too little. Publicize gives you just the right amount of publication options in Facebook, which is where I’ve always had my issues. I can tell WordPress to post only to my personal Facebook account, or I can tell it to post to Facebook pages I am an admin for. You can also tell Publicize to allow all authors in the blog to have the same privileges, or you can do it on a user basis. One issue though, you can’t tell it to post to both your personal and a Facebook page. Which is probably a good thing as far as spamming your readers.</p>
+<p>Over time I’d love to see something close to what Buffer does, which is allow you to schedule times to post your new posts or pages to your different networks. So I may want it to post to Twitter the second I publish my post, but have it syndicate to Facebook 10 minutes later.. I know that’s a feature a lot of my Social Media Marketers friends use.</p>
+<p>For more detailed information on this feature check out the <a href="http://jetpack.me/support/publicize/" title="Jetpack Publicize Documentation" target="_blank" rel="external">documentation at jetpack.me</a></p>
+<h3 id="Post_By_Email"><a href="#Post_By_Email" class="headerlink" title="Post By Email"></a>Post By Email</h3><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/11/jetpack-post-by-email.png" alt="Jetpack Post by Email" title="Jetpack Post by Email">I’ll admit, this is a feature I probably will never use. I see no use, in my work flow, to make a blog post with email. I’m packed to the brim with mobile devices and the amazing crew at Automattic have done a stellar job with bringing excellent native apps for all popular platforms. I realize that not every one has made the leap to “smart phones” but yet their device still checks email, this is a great solution. No need to single out your users right? Ok enough of that, let’s talk about what’s packed in this.</p>
+<p>Post By Email is enabled on a by user basis. This means that my username of JohnDoe has the ability to post by email, but JaneDoe doesn’t. To do so, you can enable the option in the Settings &gt; Users section.</p>
+<p>For many of us, email is just plain text… however, you can toss HTML in here and WordPress will display that in your Post By Email. But it doesn’t stop there! No, no! You can also add attachments which get posted along with using shortcodes too! Ok, things are looking pretty good here :) But most post have categories and tags, well, Post By Email will handle that too! There’s a ton of features that are supported in this option to make sure you are able to make a blog post and never have to worry if the outcome was correct when published.</p>
+<p>For more detailed information on this feature check out the <a href="http://jetpack.me/support/post-by-email/" title="Jetpack Post By Email Documentation" target="_blank" rel="external">documentation at jetpack.me</a></p>
+<h3 id="Infinite_Scroll"><a href="#Infinite_Scroll" class="headerlink" title="Infinite Scroll"></a>Infinite Scroll</h3><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/11/jetpack-infinite-scroll.png" alt="Jetpack Infinite Scroll" title="Jetpack Infinite Scroll">YES! This is great. We now have (essentially) Infinite Scroll in WordPress. It’s not exactly in core, but this is close enough. One major thing point out is that it’s not just available and ready to go with every theme! Your theme needs to support it! If you’re a theme developer, you better make sure you offer this!</p>
+<p>If you don’t know what infinite scroll is, no worries, I got you covered! Have you ever been on Twitter or Facebook, and when you scroll to the bottom, more content loads? That’s infinite scroll. This is an alternative to “paginating” content by making the theme responsive to the fact that we need more content. So with this, we essentially make an ajax call to the database to fetch the next 10 posts (or however many you have set up in your WordPress install). Setting this up is not for the light-hearted. You need to know your way through PHP and WordPress’ action and hooks to make your theme compatible. Thankfully all the documentation to add support for it is in the documentation, which you can find a link to below :)</p>
+<p>I know I’ll be making use of this in all of my themes. Will you? For more detailed information on this feature check out the <a href="http://jetpack.me/support/infinite-scroll/" title="Jetpack Infinite Scroll Documentation" target="_blank" rel="external">documentation at jetpack.me</a></p>
+<h3 id="Photon"><a href="#Photon" class="headerlink" title="Photon"></a>Photon</h3><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/11/jetpack-photon.png" alt="Jetpack Photon" title="Jetpack Photon">This feature I absolutely love! Although, I activated it on my blog… and things broke… haven’t had time to debug quite yet, so that tells me there is some tweaking needed. BUT, with that aside, this is a feature developers have screamed for.</p>
+<p>Photon is an image acceleration and editing services for sites on WordPress.com or Jetpack enabled websites. With this enabled, your images will be served from WordPress.com’s CDN (Content Delivery Network) which is great because that now means less load on your hosting provider and it’s freeeeeeee! :P</p>
+<p>Not only that, but it’s the Photon API that is amazing. Back in the day, developers used what is known as TimThumb. It’s a PHP image resizing script. This would create new images on the fly based on what size the image is requested at. HOWEVER, this led to a massive security hole and a lot of websites got hacked and the issue still exists today for a lot of themes if the script wasn’t updated.</p>
+<p>With the Photon API, we now have a secure API built FOR WordPress to generate, on the fly, images for our themes and plugins. AWWW YEAH! I had seen chatter about this in Trac and I thought it was being built for 3.5. Seems it got past me and was brought to Jetpack instead :) Which makes sense because other wise it’s impact on hosted sites will suffer. WordPress now provides the technology to auto generate your image sizes.</p>
+<p>The options for the Photon API are pretty robust and easy to use really. I’ll be playing with this and experimenting with it further and plan to try and make full use in any theme possible. For more detailed information on this feature check out the <a href="http://jetpack.me/support/infinite-scroll/" title="Jetpack Infinite Scroll Documentation" target="_blank" rel="external">documentation at jetpack.me</a></p>
+<h2 id="Still_more_to_be_seen_21"><a href="#Still_more_to_be_seen_21" class="headerlink" title="Still more to be seen!"></a>Still more to be seen!</h2><p>These our just four of the many features with in Jetpack. The power behind this plugin is phenomenal and should never be over looked, in my opinion. I’ll be honest, for a while I didn’t care too much for the plugin in its initial release, but upon enabling it and playing with it, I’m blown away. Go <a href="http://wordpress.org/extend/plugins/jetpack/" title="Download Jetpack now!" target="_blank" rel="external">download it now</a> if you haven’t yet! As time moves on, we see more awesomeness brought to our WordPress sites from the amazing team at Automattic. Keep it up guys!</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/11/08/wordpress-jetpack-2-0-packs-a-punch/" data-id="cij119tk300110rv2alitln2x" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jetpack/">jetpack</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word-6" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/19/the-weekly-word-6/">The Weekly Word #6</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/10/19/the-weekly-word-6/">
+      <time datetime="2012-10-19T17:20:36.000Z" itemprop="datePublished">10.19.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Posted for the week of  October 12th-October 18th, 2012</strong></p>
+<p>This post is part of a weekly series of articles show casing recent news within the WordPress community. These weekly articles help sift through all the important stuff worth noting in the world of WordPress. If you want to take part and share some news you feel is important on WordPress, You can submit your URL’s by tweeting <a href="https://twitter.com/colegeissinger" title="Cole Geissinger" target="_blank" rel="external">@colegeissinger</a> with the hastag <a href="https://twitter.com/#!/search/?q=%23WeeklyWord&amp;src=hash" title="WeeklyWord Twitter posts" target="_blank" rel="external">#WeeklyWord</a> and we’ll add your news to our weekly list with your twitter handle as a contributor. ^_^</p>
+<p>&nbsp;</p>
+<h2 id="Quick_Tip_3A_Upgrade_Your_WordPress_Site_via_SSH"><a href="#Quick_Tip_3A_Upgrade_Your_WordPress_Site_via_SSH" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" articles="" tips-articles="" quick-tip-upgrade-your-wordpress-site-via-ssh="" "="">Quick Tip: Upgrade Your WordPress Site via SSH</a>"><a href="http://wp.tutsplus.com/articles/tips-articles/quick-tip-upgrade-your-wordpress-site-via-ssh/" target="_blank" rel="external">Quick Tip: Upgrade Your WordPress Site via SSH</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Quick-Tip-Upgrade-Your-WordPress-Site-via-SSH-Wptuts+1-e1350669148340.png" alt="" title="Quick Tip- Upgrade Your WordPress Site via SSH - Wptuts+(1)"></p>
+<h2 id="WordPress_3-5_Beta_2"><a 10="" 2012="" href="#WordPress_3-5_Beta_2" class="headerlink" title="<a href=" http:="" wordpress.org="" news="" wordpress-3-5-beta-2="" "="">WordPress 3.5 Beta 2</a>"><a href="http://wordpress.org/news/2012/10/wordpress-3-5-beta-2/" target="_blank" rel="external">WordPress 3.5 Beta 2</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/WordPress-›-WordPress-3.5-Beta-2-e1350670328339.png" alt="" title="WordPress › WordPress 3.5 Beta 2"></p>
+<h2 id="Automatically_Download_Remote_Images_to_Your_WordPress_Media_Gallery"><a href="#Automatically_Download_Remote_Images_to_Your_WordPress_Media_Gallery" class="headerlink" title="<a href=" http:="" wpmu.org="" download-remote-images-into-wordpress="" "="">Automatically Download Remote Images to Your WordPress Media Gallery</a>"><a href="http://wpmu.org/download-remote-images-into-wordpress/" target="_blank" rel="external">Automatically Download Remote Images to Your WordPress Media Gallery</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Automatically-Download-Remote-Images-to-Your-WordPress-Media-Gallery-WPMU.org_-e1350670624157.png" alt="" title="Automatically Download Remote Images to Your WordPress Media Gallery - WPMU.org"></p>
+<h2 id="Get_Beautifully_Displayed_Real-Time_Analytics_With_Chartbeat"><a href="#Get_Beautifully_Displayed_Real-Time_Analytics_With_Chartbeat" class="headerlink" title="<a href=" http:="" www.wphub.com="" real-time-analytics-chartbeat="" "="">Get Beautifully Displayed Real-Time Analytics With Chartbeat</a>"><a href="http://www.wphub.com/real-time-analytics-chartbeat/" target="_blank" rel="external">Get Beautifully Displayed Real-Time Analytics With Chartbeat</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Explores-Chartbeats-Real-Time-Analytics-for-WordPress-WPHub-e1350670654857.png" alt="" title="Explores Chartbeat"></p>
+<h2 id="The_Beginner_u2019s_Guide_to_WordPress_Actions_and_Filters"><a href="#The_Beginner_u2019s_Guide_to_WordPress_Actions_and_Filters" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" tutorials="" the-beginners-guide-to-wordpress-actions-and-filters="" "="">The Beginner’s Guide to WordPress Actions and Filters</a>"><a href="http://wp.tutsplus.com/tutorials/the-beginners-guide-to-wordpress-actions-and-filters/" target="_blank" rel="external">The Beginner’s Guide to WordPress Actions and Filters</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/The-Beginners-Guide-to-WordPress-Actions-and-Filters-Wptuts+-e1350670700384.png" alt="" title="The Beginner"></p>
+<h2 id="What_You_Should_Put_In_Your_WordPress_Blog_u2019s_Sidebar__28and_Why_29"><a href="#What_You_Should_Put_In_Your_WordPress_Blog_u2019s_Sidebar__28and_Why_29" class="headerlink" title="<a href=" http:="" wpmu.org="" wordpress-blog-sidebar="" "="">What You Should Put In Your WordPress Blog’s Sidebar (and Why)</a>"><a href="http://wpmu.org/wordpress-blog-sidebar/" target="_blank" rel="external">What You Should Put In Your WordPress Blog’s Sidebar (and Why)</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/What-You-Should-Put-In-Your-WordPress-Blogs-Sidebar-and-Why-WPMU.org_-e1350670725649.png" alt="" title="What You Should Put In Your WordPress Blog"></p>
+<h2 id="Treehouse_Adds_WordPress_Courses_To_Curriculum"><a href="#Treehouse_Adds_WordPress_Courses_To_Curriculum" class="headerlink" title="<a href=" http:="" www.wphub.com="" treehouse-adds-wordpress-code-courses-curriculum="" "="">Treehouse Adds WordPress Courses To Curriculum</a>"><a href="http://www.wphub.com/treehouse-adds-wordpress-code-courses-curriculum/" target="_blank" rel="external">Treehouse Adds WordPress Courses To Curriculum</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/WordPress-Courses-Added-To-Treehouse-Curriculum-WPHub-e1350670768478.png" alt="" title="WordPress Courses Added To Treehouse Curriculum - WPHub"></p>
+<h2 id="WordPress_3-5_at_the_Horizon"><a href="#WordPress_3-5_at_the_Horizon" class="headerlink" title="<a href=" http:="" www.wpzoom.com="" news="" wordpress-3-5-at-the-horizon="" "="">WordPress 3.5 at the Horizon</a>"><a href="http://www.wpzoom.com/news/wordpress-3-5-at-the-horizon/" title="Permanent Link to WordPress 3.5 at the Horizon" target="_blank" rel="external">WordPress 3.5 at the Horizon</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/WordPress-3.5-at-the-Horizon-WPZOOM-e1350670795155.png" alt="" title="WordPress 3.5 at the Horizon - WPZOOM"></p>
+<h2 id="How_I_run_a_membership_site"><a 10="" 16="" 2012="" href="#How_I_run_a_membership_site" class="headerlink" title="<a href=" http:="" justintadlock.com="" archives="" how-i-run-a-membership-site"="">How I run a membership site</a>"><a href="http://justintadlock.com/archives/2012/10/16/how-i-run-a-membership-site" title="How I run a membership site" target="_blank" rel="external">How I run a membership site</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/How-I-run-a-membership-site-e1350670821914.png" alt="" title="How I run a membership site"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/10/19/the-weekly-word-6/" data-id="cij119tkd001g0rv27ltle2ge" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word-5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/15/the-weekly-word-5/">The Weekly Word #5</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/10/15/the-weekly-word-5/">
+      <time datetime="2012-10-15T18:30:06.000Z" itemprop="datePublished">10.15.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Posted for the week of  October 5th-October 11th, 2012</strong></p>
+<p>This post is part of a weekly series of articles show casing recent news within the WordPress community. These weekly articles help sift through all the important stuff worth noting in the world of WordPress. If you want to take part and share some news you feel is important on WordPress, You can submit your URL’s by tweeting <a href="https://twitter.com/colegeissinger" title="Cole Geissinger" target="_blank" rel="external">@colegeissinger</a> with the hastag <a href="https://twitter.com/#!/search/?q=%23WeeklyWord&amp;src=hash" title="WeeklyWord Twitter posts" target="_blank" rel="external">#WeeklyWord</a> and we’ll add your news to our weekly list with your twitter handle as a contributor. ^_^</p>
+<p>This edition of the Weekly Word was delayed and posted on Monday, October 15th. I was away for a week from Saturday the 6th to the 13th and was unable to make the weekly update until on time. Future articles will still continue to post every Friday.</p>
+<h2 id="Vid_Luther_3A_Why_Your_WordPress_Site_is_Slow_2C_and_How_to_Fix_It"><a 10="" 2012="" href="#Vid_Luther_3A_Why_Your_WordPress_Site_is_Slow_2C_and_How_to_Fix_It" class="headerlink" title="<a href=" http:="" wordpress.tv="" 06="" vid-luther-why-your-wordpress-site-is-slow-and-how-to-fix-it="" "="">Vid Luther: Why Your WordPress Site is Slow, and How to Fix It</a>"><a href="http://wordpress.tv/2012/10/06/vid-luther-why-your-wordpress-site-is-slow-and-how-to-fix-it/" target="_blank" rel="external">Vid Luther: Why Your WordPress Site is Slow, and How to Fix It</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Vid-Luther-Why-Your-WordPress-Site-is-Slow-and-How-to-Fix-It-WordPress.tv_-e1350237756590.png" alt="" title="Vid Luther- Why Your WordPress Site is Slow, and How to Fix It - WordPress.tv"></p>
+<h2 id="How_to_Tackle_Spam_With_The_BuddyPress_Spam_Link_Plugin"><a href="#How_to_Tackle_Spam_With_The_BuddyPress_Spam_Link_Plugin" class="headerlink" title="<a href=" http:="" wpmu.org="" how-to-tackle-spam-with-the-buddypress-spam-link-plugin="" "="">How to Tackle Spam With The BuddyPress Spam Link Plugin</a>"><a href="http://wpmu.org/how-to-tackle-spam-with-the-buddypress-spam-link-plugin/" target="_blank" rel="external">How to Tackle Spam With The BuddyPress Spam Link Plugin</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/How-to-Tackle-Spam-With-The-BuddyPress-Spam-Link-Plugin-WPMU.org_-e1350237838121.png" alt="" title="How to Tackle Spam With The BuddyPress Spam Link Plugin - WPMU.org"></p>
+<h2 id="Premium_Theme_Market_Trending_Toward_Well_Rounded_Products"><a href="#Premium_Theme_Market_Trending_Toward_Well_Rounded_Products" class="headerlink" title="<a href=" http:="" www.wphub.com="" premium-theme-market-trending-toward-well-rounded-products="" "="">Premium Theme Market Trending Toward Well Rounded Products</a>"><a href="http://www.wphub.com/premium-theme-market-trending-toward-well-rounded-products/" target="_blank" rel="external">Premium Theme Market Trending Toward Well Rounded Products</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Flexible-Products-Drive-Premium-Theme-Market-WPHub-e1350238742460.png" alt="" title="Flexible Products Drive Premium Theme Market - WPHub"></p>
+<h2 id="Digging_Into_the_Theme_Customizer_-_2_part_series"><a href="#Digging_Into_the_Theme_Customizer_-_2_part_series" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" series="" digging-into-the-theme-customizer="" "="">Digging Into the Theme Customizer - 2 part series</a>"><a href="http://wp.tutsplus.com/series/digging-into-the-theme-customizer/" target="_blank" rel="external">Digging Into the Theme Customizer - 2 part series</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Digging-Into-The-Theme-Customizer-Wptuts+-e1350239050537.png" alt="" title="Digging Into The Theme Customizer - Wptuts+"></p>
+<h2 id="Andy_Stratton_3A_Accomplish_It_With_Core_3A_Galleries_2C_Sliders__26amp_3B_More"><a 10="" 2012="" href="#Andy_Stratton_3A_Accomplish_It_With_Core_3A_Galleries_2C_Sliders__26amp_3B_More" class="headerlink" title="<a href=" http:="" wordpress.tv="" 08="" andy-stratton-accomplish-it-with-core-galleries-sliders-more="" "="">Andy Stratton: Accomplish It With Core: Galleries, Sliders &amp; More</a>"><a href="http://wordpress.tv/2012/10/08/andy-stratton-accomplish-it-with-core-galleries-sliders-more/" target="_blank" rel="external">Andy Stratton: Accomplish It With Core: Galleries, Sliders &amp; More</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Andy-Stratton-Accomplish-It-With-Core-Galleries-Sliders-More-WordPress.tv_-e1350239375445.png" alt="" title="Andy Stratton- Accomplish It With Core- Galleries, Sliders &amp; More - WordPress.tv"></p>
+<h2 id="A_Primer_on_Ajax_in_the_WordPress_Frontend_3A_Actually_Doing_It"><a href="#A_Primer_on_Ajax_in_the_WordPress_Frontend_3A_Actually_Doing_It" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" tutorials="" plugins="" a-primer-on-ajax-in-the-wordpress-frontend-actually-doing-it="" "="">A Primer on Ajax in the WordPress Frontend: Actually Doing It</a>"><a href="http://wp.tutsplus.com/tutorials/plugins/a-primer-on-ajax-in-the-wordpress-frontend-actually-doing-it/" target="_blank" rel="external">A Primer on Ajax in the WordPress Frontend: Actually Doing It</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/A-Primer-on-Ajax-in-the-WordPress-Frontend-Actually-Doing-It-Wptuts+-e1350239570711.png" alt="" title="A Primer on Ajax in the WordPress Frontend- Actually Doing It - Wptuts+"></p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/10/15/the-weekly-word-5/" data-id="cij119tkf001j0rv26vl1asm9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word-4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/10/05/the-weekly-word-4/">The Weekly Word #4</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/10/05/the-weekly-word-4/">
+      <time datetime="2012-10-05T19:00:10.000Z" itemprop="datePublished">10.05.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Posted for the week of  September 28st-October 4th, 2012</strong></p>
+<p>This post is part of a weekly series of articles show casing recent news within the WordPress community. These weekly articles help sift through all the important stuff worth noting in the world of WordPress. If you want to take part and share some news you feel is important on WordPress, You can submit your URL’s by tweeting <a href="https://twitter.com/colegeissinger" title="Cole Geissinger" target="_blank" rel="external">@colegeissinger</a> with the hastag <a href="https://twitter.com/#!/search/?q=%23WeeklyWord&amp;src=hash" title="WeeklyWord Twitter posts" target="_blank" rel="external">#WeeklyWord</a> and we’ll add your news to our weekly list with your twitter handle as a contributor. ^_^</p>
+<p>Just a quick announcement, The Weekly Word article #5 will be delayed and posted on Monday, October 15th. I will be away for a week starting Saturday the 6th so I will be unable to make my weekly update until then. Future articles will still continue to post every Friday.</p>
+<h2 id="WordPress_3-5_Beta_1__28and_a_bonus_21_29"><a 2012="" href="#WordPress_3-5_Beta_1__28and_a_bonus_21_29" class="headerlink" title="<a href=" http:="" wordpress.org="" news="" 09="" wordpress-3-5-beta-1="" "="">WordPress 3.5 Beta 1 (and a bonus!)</a>"><a href="http://wordpress.org/news/2012/09/wordpress-3-5-beta-1/" target="_blank" rel="external">WordPress 3.5 Beta 1 (and a bonus!)</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/WordPress-›-WordPress-3.5-Beta-1-and-a-bonus-e1349394500336.png" alt="" title="WordPress › WordPress 3.5 Beta 1 (and a bonus!)"></p>
+<h2 id="The_Ultimate_Site_Finalization_Checklist_for_Professional_WordPress_Websites"><a href="#The_Ultimate_Site_Finalization_Checklist_for_Professional_WordPress_Websites" class="headerlink" title="<a href=" http:="" wpmu.org="" the-ultimate-site-finalization-checklist-for-professional-wordpress-websites="" "="">The Ultimate Site Finalization Checklist for Professional WordPress Websites</a>"><a href="http://wpmu.org/the-ultimate-site-finalization-checklist-for-professional-wordpress-websites/" target="_blank" rel="external">The Ultimate Site Finalization Checklist for Professional WordPress Websites</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Ultimate-Site-Finalization-Checklist-Professional-WordPress-Websites-e1349394677402.png" alt="" title="Ultimate Site Finalization Checklist - Professional WordPress Websites"></p>
+<h2 id="Jeff_Waugh_3A_TurboPress_3A_The_High_Performance_Guide_to_WordPress"><a 10="" 2012="" href="#Jeff_Waugh_3A_TurboPress_3A_The_High_Performance_Guide_to_WordPress" class="headerlink" title="<a href=" http:="" wordpress.tv="" 04="" jeff-waugh-turbopress-the-high-performance-guide-to-wordpress="" "="">Jeff Waugh: TurboPress: The High Performance Guide to WordPress</a>"><a href="http://wordpress.tv/2012/10/04/jeff-waugh-turbopress-the-high-performance-guide-to-wordpress/" target="_blank" rel="external">Jeff Waugh: TurboPress: The High Performance Guide to WordPress</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Jeff-Waugh-TurboPress-The-High-Performance-Guide-to-WordPress-WordPress.tv_-e1349395050453.png" alt="" title="Jeff Waugh- TurboPress- The High Performance Guide to WordPress - WordPress.tv"></p>
+<h2 id="Your_WordPress_Disaster_Recovery_Plan"><a href="#Your_WordPress_Disaster_Recovery_Plan" class="headerlink" title="<a href=" http:="" wpmu.org="" your-wordpress-disaster-recovery-plan="" "="">Your WordPress Disaster Recovery Plan</a>"><a href="http://wpmu.org/your-wordpress-disaster-recovery-plan/" target="_blank" rel="external">Your WordPress Disaster Recovery Plan</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Your-WordPress-Disaster-Recovery-Plan-e1349395453508.png" alt="" title="Your WordPress Disaster Recovery Plan"></p>
+<h2 id="WordPress_Theme_Demand_Still_Strong"><a href="#WordPress_Theme_Demand_Still_Strong" class="headerlink" title="<a href=" http:="" www.wphub.com="" wordpress-themes-demand-still-strong="" "="">WordPress Theme Demand Still Strong</a>"><a href="http://www.wphub.com/wordpress-themes-demand-still-strong/" target="_blank" rel="external">WordPress Theme Demand Still Strong</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/The-WordPress-Themes-Market-Continues-to-Grow-WPHub-e1349395673589.png" alt="" title="The WordPress Themes Market Continues to Grow - WPHub"></p>
+<h2 id="Grid_Columns_WordPress_Plugin"><a 10="" 2012="" href="#Grid_Columns_WordPress_Plugin" class="headerlink" title="<a href=" http:="" justintadlock.com="" archives="" 03="" grid-columns-wordpress-plugin"="">Grid Columns WordPress Plugin</a>"><a href="http://justintadlock.com/archives/2012/10/03/grid-columns-wordpress-plugin" title="Grid Columns WordPress Plugin" target="_blank" rel="external">Grid Columns WordPress Plugin</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/Grid-Columns-WordPress-Plugin-e1349395864692.png" alt="" title="Grid Columns WordPress Plugin"></p>
+<h2 id="WordPress_snippet_3A_Search_within_a_specific_post_type_only"><a href="#WordPress_snippet_3A_Search_within_a_specific_post_type_only" class="headerlink" title="<a href=" http:="" www.wprecipes.com="" wordpress-snippet-search-within-a-specific-post-type-only"="">WordPress snippet: Search within a specific post type only</a>"><a href="http://www.wprecipes.com/wordpress-snippet-search-within-a-specific-post-type-only" title="Permanent Link to WordPress snippet: Search within a specific post type only" target="_blank" rel="external">WordPress snippet: Search within a specific post type only</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/WordPress-snippet-Search-within-a-specific-post-type-only-e1349396195279.png" alt="" title="WordPress snippet- Search within a specific post type only"></p>
+<h2 id="XML-RPC_enabled_by_default_in_WordPress_3-5"><a 2484="" href="#XML-RPC_enabled_by_default_in_WordPress_3-5" class="headerlink" title="<a href=" http:="" wpengineer.com="" xml-rpc-enabled-by-default-in-wordpress-3-5="" "="">XML-RPC enabled by default in WordPress 3.5</a>"><a href="http://wpengineer.com/2484/xml-rpc-enabled-by-default-in-wordpress-3-5/" title="Permanent Link to XML-RPC enabled by default in WordPress 3.5" target="_blank" rel="external">XML-RPC enabled by default in WordPress 3.5</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/10/XML-RPC-enabled-by-default-in-WordPress-3.5-WP-Engineer-e1349396467991.png" alt="" title="XML-RPC enabled by default in WordPress 3.5 - WP Engineer"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/10/05/the-weekly-word-4/" data-id="cij119tkg001l0rv2oj7oan71" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word-3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/28/the-weekly-word-3/">The Weekly Word #3</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/09/28/the-weekly-word-3/">
+      <time datetime="2012-09-28T17:17:25.000Z" itemprop="datePublished">09.28.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Posted for the week of  September 21st-27th, 2012</strong></p>
+<p>This post is part of a weekly series of articles show casing recent news within the WordPress community. These weekly articles help sift through all the important stuff worth noting in the world of WordPress. If you want to take part and share some news you feel is important on WordPress, You can submit your URL’s by tweeting <a href="https://twitter.com/colegeissinger" title="Cole Geissinger" target="_blank" rel="external">@colegeissinger</a> with the hastag <a href="https://twitter.com/#!/search/?q=%23WeeklyWord&amp;src=hash" title="WeeklyWord Twitter posts" target="_blank" rel="external">#WeeklyWord</a> and we’ll add your news to our weekly list with your twitter handle as a contributor. ^_^</p>
+<h2 id="Maintain_All_Your_WordPress_Websites_From_A_Central_Location"><a href="#Maintain_All_Your_WordPress_Websites_From_A_Central_Location" class="headerlink" title="<a href=" http:="" wpmu.org="" maintain-all-your-wordpress-websites-from-a-central-location="" "="">Maintain All Your WordPress Websites From A Central Location</a>"><a href="http://wpmu.org/maintain-all-your-wordpress-websites-from-a-central-location/" target="_blank" rel="external">Maintain All Your WordPress Websites From A Central Location</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Maintain-All-You-WordPress-Websites-From-A-Central-Location-e1348855009417.png" alt="" title="Maintain All You WordPress Websites From A Central Location"></p>
+<h2 id="How_to_Handle_a_Hacked_WordPress_Install"><a href="#How_to_Handle_a_Hacked_WordPress_Install" class="headerlink" title="<a href=" http:="" wphacks.com="" how-to-handle-a-hacked-wordpress-install="" "="">How to Handle a Hacked WordPress Install</a>"><a href="http://wphacks.com/how-to-handle-a-hacked-wordpress-install/" target="_blank" rel="external">How to Handle a Hacked WordPress Install</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-to-Handle-a-Hacked-WordPress-Install-WordPress-Hacks-e1348855101294.png" alt="" title="How to Handle a Hacked WordPress Install - WordPress Hacks"></p>
+<h2 id="How_to_Get_Paid_What_You_u2019re_Worth"><a 25="" 2012="" href="#How_to_Get_Paid_What_You_u2019re_Worth" class="headerlink" title="<a href=" http:="" wordpress.tv="" 09="" how-to-get-paid-what-youre-worth="" "="">How to Get Paid What You’re Worth</a>"><a href="http://wordpress.tv/2012/09/25/how-to-get-paid-what-youre-worth/" target="_blank" rel="external">How to Get Paid What You’re Worth</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-to-Get-Paid-What-You’re-Worth-WordPress.tv_-e1348855272967.png" alt="" title="How to Get Paid What You’re Worth - WordPress.tv"></p>
+<h2 id="Posting_via_the_Front_End_-_2_Part_Series"><a href="#Posting_via_the_Front_End_-_2_Part_Series" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" series="" posting-via-the-front-end="" "="">Posting via the Front End - 2 Part Series</a>"><a href="http://wp.tutsplus.com/series/posting-via-the-front-end/" target="_blank" rel="external">Posting via the Front End - 2 Part Series</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Posting-Via-The-Front-End-Wptuts+-e1348855374416.png" alt="" title="Posting Via The Front End - Wptuts+"></p>
+<h2 id="How_to_Find_and_Fix_Broken_Links_on_Your_WordPress_Site"><a href="#How_to_Find_and_Fix_Broken_Links_on_Your_WordPress_Site" class="headerlink" title="<a href=" http:="" wpmu.org="" daily-tip-how-to-find-and-fix-broken-links-on-your-wordpress-site="" "="">How to Find and Fix Broken Links on Your WordPress Site</a>"><a href="http://wpmu.org/daily-tip-how-to-find-and-fix-broken-links-on-your-wordpress-site/" target="_blank" rel="external">How to Find and Fix Broken Links on Your WordPress Site</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Daily-Tip-How-to-Find-and-Fix-Broken-Links-on-Your-WordPress-Site-e1348855656687.png" alt="" title="Daily Tip- How to Find and Fix Broken Links on Your WordPress Site"></p>
+<h2 id="Easily_Disable_Comments_with_Disable_Comments_Plugin"><a href="#Easily_Disable_Comments_with_Disable_Comments_Plugin" class="headerlink" title="<a href=" http:="" www.wphub.com="" easily-disable-comments-with-disable-comments-plugin="" "="">Easily Disable Comments with Disable Comments Plugin</a>"><a href="http://www.wphub.com/easily-disable-comments-with-disable-comments-plugin/" target="_blank" rel="external">Easily Disable Comments with Disable Comments Plugin</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-To-Disable-Comments-Globally-Or-On-Custom-Post-Types-WPHub-e1348855743681.png" alt="" title="How To Disable Comments Globally Or On Custom Post Types - WPHub"></p>
+<h2 id="How_to_move_very_large_MySQL_Databases"><a 2012="" href="#How_to_move_very_large_MySQL_Databases" class="headerlink" title="<a href=" http:="" wpguru.co.uk="" 09="" how-to-move-very-large-mysql-databases="" "="">How to move very large MySQL Databases</a>"><a href="http://wpguru.co.uk/2012/09/how-to-move-very-large-mysql-databases/" target="_blank" rel="external">How to move very large MySQL Databases</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-to-move-very-large-MySQL-Databases-—-The-WP-Guru-e1348855831922.png" alt="" title="How to move very large MySQL Databases — The WP Guru"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/09/28/the-weekly-word-3/" data-id="cij119tkp001n0rv2jiut33nv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/20/the-weekly-word-2/">The Weekly Word #2</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/09/20/the-weekly-word-2/">
+      <time datetime="2012-09-20T18:00:01.000Z" itemprop="datePublished">09.20.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Posted for the week of  September 14th-20th, 2012</strong></p>
+<p>This post is part of a weekly series of articles show casing recent news within the WordPress community. These weekly articles help sift through all the important stuff worth noting in the world of WordPress. If you want to take part and share some news you feel is important on WordPress, You can submit your URL’s by tweeting <a href="https://twitter.com/colegeissinger" title="Cole Geissinger" target="_blank" rel="external">@colegeissinger</a> with the hastag <a href="https://twitter.com/#!/search/?q=%23WeeklyWord&amp;src=hash" title="WeeklyWord Twitter posts" target="_blank" rel="external">#WeeklyWord</a> and we’ll add your news to our weekly list with your twitter handle as a contributor. ^_^</p>
+<h2 id="Free_Terms_of_Service_and_Privacy_Policy_for_Your_WordPress_Sites"><a href="#Free_Terms_of_Service_and_Privacy_Policy_for_Your_WordPress_Sites" class="headerlink" title="<a href=" http:="" wpmu.org="" wordpress-terms-of-service-privacy-policy="" "="">Free Terms of Service and Privacy Policy for Your WordPress Sites</a>"><a href="http://wpmu.org/wordpress-terms-of-service-privacy-policy/" target="_blank" rel="external">Free Terms of Service and Privacy Policy for Your WordPress Sites</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/WordPress-Terms-of-Service-and-Privacy-Policy-1024x619.png" alt="" title="WordPress Terms of Service and Privacy Policy"></p>
+<h2 id="Making_A_Theme_With_Bones_-_3_Part_Series"><a href="#Making_A_Theme_With_Bones_-_3_Part_Series" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" series="" making-a-theme-with-bones="" "="">Making A Theme With Bones - 3 Part Series</a>"><a href="http://wp.tutsplus.com/series/making-a-theme-with-bones/" target="_blank" rel="external">Making A Theme With Bones - 3 Part Series</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Making-A-Theme-With-Bones-Wptuts+-1024x619.png" alt="" title="Making A Theme With Bones - Wptuts+"></p>
+<h2 id="Make_a_WordPress_Menu_that_Stands_Out_From_the_Crowd"><a href="#Make_a_WordPress_Menu_that_Stands_Out_From_the_Crowd" class="headerlink" title="<a href=" http:="" wpmu.org="" wordpress-menu-images="" "="">Make a WordPress Menu that Stands Out From the Crowd</a>"><a href="http://wpmu.org/wordpress-menu-images/" target="_blank" rel="external">Make a WordPress Menu that Stands Out From the Crowd</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-to-Make-an-Image-Based-WordPress-Menu-1024x619.png" alt="" title="How to Make an Image-Based WordPress Menu"></p>
+<h2 id="How_Compatible_Is_Your_Theme_With_WordPress_3F"><a href="#How_Compatible_Is_Your_Theme_With_WordPress_3F" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" articles="" tips-articles="" how-compatible-is-your-theme-with-wordpress="" "="">How Compatible Is Your Theme With WordPress?</a>"><a href="http://wp.tutsplus.com/articles/tips-articles/how-compatible-is-your-theme-with-wordpress/" target="_blank" rel="external">How Compatible Is Your Theme With WordPress?</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-Compatible-Is-Your-Theme-With-WordPress-Wptuts+-1024x619.png" alt="" title="How Compatible Is Your Theme With WordPress- - Wptuts+"></p>
+<h2 id="Taking_A_Closer_Look_at_Twenty_Twelve_3A_WordPress_u2019_Latest_Flagship_Theme"><a href="#Taking_A_Closer_Look_at_Twenty_Twelve_3A_WordPress_u2019_Latest_Flagship_Theme" class="headerlink" title="<a href=" http:="" www.noupe.com="" wordpress="" closer-look-twenty-twelve-new-flagship-theme-wordpress-71274.html"="">Taking A Closer Look at Twenty Twelve: WordPress’ Latest Flagship Theme</a>"><a href="http://www.noupe.com/wordpress/closer-look-twenty-twelve-new-flagship-theme-wordpress-71274.html" target="_blank" rel="external">Taking A Closer Look at Twenty Twelve: WordPress’ Latest Flagship Theme</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Taking-A-Closer-Look-at-Twenty-Twelve-Theme-For-WordPress-1024x619.png" alt="" title="Taking A Closer Look at Twenty Twelve Theme For WordPress"></p>
+<h2 id="How_to_Analyze_Your_WordPress_Installation_u2019s_Performance"><a href="#How_to_Analyze_Your_WordPress_Installation_u2019s_Performance" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" tutorials="" scaling-caching="" how-to-analyze-your-wordpress-installations-performance="" "="">How to Analyze Your WordPress Installation’s Performance</a>"><a href="http://wp.tutsplus.com/tutorials/scaling-caching/how-to-analyze-your-wordpress-installations-performance/" target="_blank" rel="external">How to Analyze Your WordPress Installation’s Performance</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/How-to-Analyze-Your-WordPress-Installations-Performance-Wptuts+-1024x619.png" alt="" title="How to Analyze Your WordPress Installation"></p>
+<h2 id="Integrating_With_WordPress_u2019_UI_-_2_Part_Series"><a href="#Integrating_With_WordPress_u2019_UI_-_2_Part_Series" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" tutorials="" integrating-with-wordpress-ui-the-basics="" "="">Integrating With WordPress’ UI - 2 Part Series</a>"><a href="http://wp.tutsplus.com/tutorials/integrating-with-wordpress-ui-the-basics/" target="_blank" rel="external">Integrating With WordPress’ UI - 2 Part Series</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Integrating-With-Wordpress-Ui-Wptuts+.png" alt="" title="Integrating With Wordpress Ui - Wptuts+"></p>
+<h2 id="WordPress_Is_Probably_Powering_Your_Favorite_Candidate_u2019s_Website"><a 17="" 2012="" href="#WordPress_Is_Probably_Powering_Your_Favorite_Candidate_u2019s_Website" class="headerlink" title="<a href=" http:="" mashable.com="" 09="" politics-wordpress="" "="">WordPress Is Probably Powering Your Favorite Candidate’s Website</a>"><a href="http://mashable.com/2012/09/17/politics-wordpress/" target="_blank" rel="external">WordPress Is Probably Powering Your Favorite Candidate’s Website</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/WordPress-Is-Probably-Powering-Your-Favorite-Candidates-Website-e1348188429477.png" alt="" title="WordPress Is Probably Powering Your Favorite Candidate"></p>
+<h2 id="WP_Engine_Review_3A_Managed_WordPress_Hosting_Developers_Will_Love"><a href="#WP_Engine_Review_3A_Managed_WordPress_Hosting_Developers_Will_Love" class="headerlink" title="<a href=" http:="" wpmu.org="" wp-engine-review="" "="">WP Engine Review: Managed WordPress Hosting Developers Will Love</a>"><a href="http://wpmu.org/wp-engine-review/" target="_blank" rel="external">WP Engine Review: Managed WordPress Hosting Developers Will Love</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/WP-Engine-Review-Managed-WordPress-Hosting-Developers-Will-Love-WPMU.org_-e1348188531915.png" alt="" title="WP Engine Review- Managed WordPress Hosting Developers Will Love - WPMU.org"></p>
+<h2 id="WordPress_Helpers_3A_The_Missing_Settings_Page_for_WordPress"><a href="#WordPress_Helpers_3A_The_Missing_Settings_Page_for_WordPress" class="headerlink" title="<a href=" http:="" wpmu.org="" wordpress-helpers-the-missing-settings-page-for-wordpress="" "="">WordPress Helpers: The Missing Settings Page for WordPress</a>"><a href="http://wpmu.org/wordpress-helpers-the-missing-settings-page-for-wordpress/" target="_blank" rel="external">WordPress Helpers: The Missing Settings Page for WordPress</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/WordPress-Helpers-The-Missing-Settings-Page-for-WordPress-WPMU.org_-e1348188606935.png" alt="" title="WordPress Helpers- The Missing Settings Page for WordPress - WPMU.org"></p>
+<h2 id="Developer_plugin_v1-1_3A_Optimize_Your_Theme_Development_Environment"><a 20="" 2012="" href="#Developer_plugin_v1-1_3A_Optimize_Your_Theme_Development_Environment" class="headerlink" title="<a href=" http:="" themeshaper.com="" 09="" developer-plugin-v1-1-optimize-your-theme-development-environment="" "="">Developer plugin v1.1: Optimize Your Theme Development Environment</a>"><a href="http://themeshaper.com/2012/09/20/developer-plugin-v1-1-optimize-your-theme-development-environment/" target="_blank" rel="external">Developer plugin v1.1: Optimize Your Theme Development Environment</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Developer-plugin-v1.1-Optimize-Your-Theme-Development-Environment-ThemeShaper-e1348188813692.png" alt="" title="Developer plugin v1.1- Optimize Your Theme Development Environment - ThemeShaper"></p>
+<h2 id="Design_updates_and_improvements_make_their_way_to_WordPress_Trac"><a href="#Design_updates_and_improvements_make_their_way_to_WordPress_Trac" class="headerlink" title="<a href=" http:="" wpcandy.com="" reports="" design-updates-and-improvements-come-to-wordpress-trac"="">Design updates and improvements make their way to WordPress Trac</a>"><a href="http://wpcandy.com/reports/design-updates-and-improvements-come-to-wordpress-trac" title="Permalink to Design updates and improvements make their way to WordPress Trac" target="_blank" rel="external">Design updates and improvements make their way to WordPress Trac</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Design-updates-and-improvements-make-their-way-to-WordPress-Trac-WPCandy-e1348189186303.png" alt="" title="Design updates and improvements make their way to WordPress Trac - WPCandy"></p>
+<h2 id="WordPress_for_Android_Version_2-2_Now_Available_3A_Featured_Images__26amp_3B_All-New_Stats"><a 19="" 2012="" href="#WordPress_for_Android_Version_2-2_Now_Available_3A_Featured_Images__26amp_3B_All-New_Stats" class="headerlink" title="<a href=" http:="" android.wordpress.org="" 09="" version-2-2-now-available-featured-images-all-new-stats="" "="">WordPress for Android Version 2.2 Now Available: Featured Images &amp; All-New Stats</a>"><a href="http://android.wordpress.org/2012/09/19/version-2-2-now-available-featured-images-all-new-stats/" target="_blank" rel="external">WordPress for Android Version 2.2 Now Available: Featured Images &amp; All-New Stats</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Version-2.2-Now-Available-Featured-Images-All-New-Stats-«-WordPress-for-Android-e1348189675308.png" alt="" title="Version 2.2 Now Available- Featured Images &amp; All-New Stats « WordPress for Android"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/09/20/the-weekly-word-2/" data-id="cij119tkr001p0rv2llowequn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/14/the-weekly-word-1/">The Weekly Word #1</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/09/14/the-weekly-word-1/">
+      <time datetime="2012-09-14T17:40:28.000Z" itemprop="datePublished">09.14.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><strong>Posted for the week of  September 7th-13th, 2012</strong></p>
+<p>This post is part of a weekly series of articles show casing recent news within the WordPress community. These weekly articles help sift through all the important stuff worth noting in the world of WordPress. If you want to take part and share some news you feel is important on WordPress, You can submit your URL’s by tweeting <a href="https://twitter.com/colegeissinger" title="Cole Geissinger" target="_blank" rel="external">@colegeissinger</a> with the hastag <a href="https://twitter.com/#!/search/?q=%23WeeklyWord&amp;src=hash" title="WeeklyWord Twitter posts" target="_blank" rel="external">#WeeklyWord</a> and we’ll add your news to our weekly list with your twitter handle as a contributor. ^_^</p>
+<h2 id="Quick_Tip_3A_Get_the_Current_Screen_u2019s_Hooks"><a href="#Quick_Tip_3A_Get_the_Current_Screen_u2019s_Hooks" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" articles="" tips-articles="" quick-tip-get-the-current-screens-hooks="" "="">Quick Tip: Get the Current Screen’s Hooks</a>"><a href="http://wp.tutsplus.com/articles/tips-articles/quick-tip-get-the-current-screens-hooks/" title="Quick Tip: Get the Current Screen’s Hooks by WP.TutsPlus.com" target="_blank" rel="external">Quick Tip: Get the Current Screen’s Hooks</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Quick-Tip-Get-the-Current-Screens-Hooks-Wptuts+-1024x619.png" alt="" title="Quick Tip- Get the Current Screen"></p>
+<h2 id="Writing_Extensible_Plugins_With_Actions_and_Filters"><a href="#Writing_Extensible_Plugins_With_Actions_and_Filters" class="headerlink" title="<a href=" http:="" wp.tutsplus.com="" tutorials="" plugins="" writing-extensible-plugins-with-actions-and-filters="" "="">Writing Extensible Plugins With Actions and Filters</a>"><a href="http://wp.tutsplus.com/tutorials/plugins/writing-extensible-plugins-with-actions-and-filters/" title="Writing Extensible Plugins With Actions and Filters" target="_blank" rel="external">Writing Extensible Plugins With Actions and Filters</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Writing-Extensible-Plugins-With-Actions-and-Filters-Wptuts+-1024x619.png" alt="" title="Writing Extensible Plugins With Actions and Filters - Wptuts+"></p>
+<h2 id="Notification_List_for_New_Books"><a 2012="" href="#Notification_List_for_New_Books" class="headerlink" title="<a href=" http:="" digwp.com="" 09="" notification-list-for-new-books="" "="">Notification List for New Books</a>"><a href="http://digwp.com/2012/09/notification-list-for-new-books/" target="_blank" rel="external">Notification List for New Books</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Notification-List-for-New-Books-Digging-into-WordPress-1024x619.png" alt="" title="Notification List for New Books - Digging into WordPress"></p>
+<h2 id="Put_your_credit_cards_away_2C_because_ZippyKid_is_now_free_for_most_of_us"><a href="#Put_your_credit_cards_away_2C_because_ZippyKid_is_now_free_for_most_of_us" class="headerlink" title="<a href=" http:="" wpcandy.com="" reports="" zippykid-is-free-for-most-wordpress-users"="">Put your credit cards away, because ZippyKid is now free for most of us</a>"><a href="http://wpcandy.com/reports/zippykid-is-free-for-most-wordpress-users" title="Permalink to Put your credit cards away, because ZippyKid is now free for most of us" target="_blank" rel="external">Put your credit cards away, because ZippyKid is now free for most of us</a></h2><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Put-your-credit-cards-away-because-ZippyKid-is-now-free-for-most-of-us-WPCandy.png" alt="" title="Put your credit cards away, because ZippyKid is now free for most of us - WPCandy"></p>
+<h1 id="Why_WordPress_3F__5BInfographic_5D"><a href="#Why_WordPress_3F__5BInfographic_5D" class="headerlink" title="<a href=" http:="" freshmuse.com="" why-wordpress-infographic="" "="">Why WordPress? [Infographic]</a>"><a href="http://freshmuse.com/why-wordpress-infographic/" target="_blank" rel="external">Why WordPress? [Infographic]</a></h1><p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/Why-WordPress-Infographic-freshmuse-1024x619.png" alt="" title="Why WordPress- [Infographic] - freshmuse"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/09/14/the-weekly-word-1/" data-id="cij119tkt001r0rv2j8ince0k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-the-weekly-word" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/09/12/the-weekly-word/">The Weekly Word</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/09/12/the-weekly-word/">
+      <time datetime="2012-09-12T17:23:20.000Z" itemprop="datePublished">09.12.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Misc/">Misc</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Misc/Weekly-Word/">Weekly Word</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p><img src="http://www.colegeissinger.com/wp-content/uploads/2012/09/the-weekly-word.jpg" alt="" title="the-weekly-word"><br>There is so much that happens weekly, if not daily, within the WordPress community, and it is difficult to digest all of what’s going on because there are so many avenues and websites one must follow to stay up to date. That’s where <strong>The Weekly Word</strong> comes in. I’ll be consolidating all the important stuff happening within the community into a weekly article that will go to “press” every Friday.</p>
+<p>Get ready for the Weekly Word! First article goes to press Friday!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/09/12/the-weekly-word/" data-id="cij119tk9001a0rv2bbyyr87m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Announcements/">Announcements</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <article id="post-expand-menu-dropdown-if-viewing-parent-page-in-wordpress" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2012/08/22/expand-menu-dropdown-if-viewing-parent-page-in-wordpress/">Expand Menu Dropdown if viewing parent page in WordPress</a>
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/08/22/expand-menu-dropdown-if-viewing-parent-page-in-wordpress/">
+      <time datetime="2012-08-22T18:32:35.000Z" itemprop="datePublished">08.22.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Javascript/">Javascript</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/Javascript/Tutorial/">Tutorial</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Today I was faced with auto expanding a sidebar drop down if we were viewing that parent&nbsp;category. In the past, at other design firms I have worked for, our solution was a complicated JavaScript URL sniffer that would match the current URL to the URL found in the menu. That never settled well with me. So I sought out to figure out a better way to do so.</p>
+<p><a href="http://jsfiddle.net/colegeissinger/ZrQ8h/1/" target="_blank" rel="external">Check out the demo at jsFiddle</a>. I’ll have an actual Demo and option to download the Source in time, after I have found the time at least :P</p>
+<h2 id="Generate_the_HTML_from_wp_list_categories_28_29"><a href="#Generate_the_HTML_from_wp_list_categories_28_29" class="headerlink" title="Generate the HTML from wp_list_categories()"></a>Generate the HTML from wp_list_categories()</h2><p>What I found is good ol’ WordPress already takes care of this for us. So let’s say we are using the&nbsp;_wp_list<em>categories</em> function to list out all categories. In this very instance, I am building a <a href="http://www.woothemes.com/woocommerce/" target="_blank" rel="external">Woocommerce</a> site so my code looks like this:</p>
+<p><pre class="brush: php; gutter: true">&amp;lt;ul id=&quot;side-menu&quot;&amp;gt;<br>    &lt;!–?php wp_list_categories(&#039;taxonomy=product_cat&amp;orderby=slug&amp;order=ASC&amp;exclude=23,22,21&amp;title_li=&#039;); ?–&gt;<br>&lt;!–[END #side-menu]–&gt;</pre><br>To summarize what is going on here, I am requesting all categories in the <a href="http://codex.wordpress.org/Taxonomies#Custom_Taxonomies" target="_blank" rel="external">custom taxonomy</a> _product<em>cat</em>, this is set up from Woocommerce by default, and ordering all categories in that taxonomy to be sorted in alphabetical order by the slug, or URL. We are also excluding out three categories and leaving the title blank.</p>
+<p>This will then return HTML like this:</p>
+<p><pre class="brush: html; gutter: true">&amp;lt;ul id=&quot;side-menu&quot;&amp;gt;<br>&lt;ul&gt;<br>    &lt;li class=&quot;cat-item cat-item-33&quot;&gt;&lt;a title=&quot;View all posts filed under Category 1&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-1/&quot;&gt;Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-1/&quot;&gt;Category</a> 1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class=&quot;cat-item cat-item-16 current-cat&quot;&gt;&lt;a title=&quot;View all posts filed under Category 2&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2&quot;&gt;Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2&quot;&gt;Category</a> 2&lt;/a&gt;<br>&lt;ul class=&quot;children&quot;&gt;<br>    &lt;li class=&quot;cat-item cat-item-17&quot;&gt;&lt;a title=&quot;View all posts filed under Sub-Category 1&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2/sub-category-1&quot;&gt;Sub-Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2/sub-category-1&quot;&gt;Sub-Category</a> 1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class=&quot;cat-item cat-item-17&quot;&gt;&lt;a title=&quot;View all posts filed under Sub-Category 2&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category</a> 1&lt;/a&gt;&lt;/li&gt;<br>    &lt;li class=&quot;cat-item cat-item-17&quot;&gt;&lt;a title=&quot;View all posts filed under Sub-Category 2&quot; href=&quot;<a href="http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category" target="_blank" rel="external">http://www.domain-name-here.com/product-category/category-2/sub-category-2&quot;&gt;Sub-Category</a> 2&lt;/a&gt;&lt;/li&gt;<br>&lt;/ul&gt;<br>&lt;/li&gt;<br>&lt;/ul&gt;</pre><br>All the classes here are WordPress generated and 99% of these are not relevant to making this functionality work, but I included them here so you have a good idea of what our generated code will look like. Now the beauty of this function is that it auto adds two classes called “<em>current-cat</em>“ or “<em>current-cat-parent</em>“ to the category we are currently viewing as shown in Line 3 above. The second class listed will be applied to the parent category if we are viewing a sub-category. We’ll make use of this also in our jQuery. AWESOME! We can use these classes in our jQuery code that we use for expanding and contracting our sub-categories.</p>
+<h2 id="Add_the_jQuery"><a href="#Add_the_jQuery" class="headerlink" title="Add the jQuery"></a>Add the jQuery</h2><p>Now that we have our HTML generated we need to build the jQuery menu. This is pretty straight forward really.</p>
+<p><pre class="brush: javascript; gutter: true">jQuery(document).ready(function($) {<br>    $(&#039;#side-menu &gt; li &gt; ul&#039;).hide().click(function(e) {<br>        e.stopPropagation();<br>    });</pre></p>
+<pre><code>var current_cat = $(&amp;#039;#side-menu &amp;gt; li.current-cat, #side-menu &amp;gt; li.current-cat-parent&amp;#039;);
+
+if(current_cat.length == 1) {
+    current_cat.children(&amp;#039;ul&amp;#039;).slideDown();
+}
+
+$(&amp;#039;#side-menu &amp;gt; li &amp;gt; ul.children&amp;#039;).each(function() {
+    $(this).parent().toggle(function() {
+    $(this).find(&amp;#039;ul&amp;#039;).slideDown();
+}, function() {
+    $(this).find(&amp;#039;ul&amp;#039;).slideUp();
+});    
+});
+</code></pre><p>});<br>Let’s explain the code above..</p>
+<ol>
+<li>First we wrap our code in the Document Ready wrapper. This will execute our script after the DOM has loaded. Since WordPress by default runs jQuery in no Conflict mode, I like to specify it first by calling the jQuery handle and then defining the dollar symbol in the function field so I can use the shorter version in my script.</li>
+<li>Next we select each sub-category UL and hide them. We also remove the default function of the a tag on these elements so they don’t try to redirect the page when we want to view the sub-categories.</li>
+<li>We then setup a variable called _current<em>cat</em> which will holde our DOM selections. We’ll select two spots, when the class <em>current-cat</em> or <em>current-cat-parent</em> are present.</li>
+<li>Next we’ll check to see if any of our classes are present in the DOM by calling our current_cat variable and checking if it is present. If so, we then <em>slideDown</em> the child UL element.</li>
+<li>Now we’ll animate our sub-categories to expand down when clicked. We’ll first select each UL with a class of <em>children</em> and tell it to <em>slideDown</em> when clicked, and if we click it again we’ll <em>slideUp</em> to hide the sub-categories again.<br>And there we have it! Of course you can add some CSS to give it styling, but it’s not required to make this feature run. You can <a href="http://jsfiddle.net/colegeissinger/ZrQ8h/1/" target="_blank" rel="external">check out the demo at jsFiddle</a> and you can grab the CSS there for base styling if you wish. I’ll eventually update this to have a Demo and an option to download the Source. This is my first article that I needed this option and will have to investigate further to make this happen properly when I have the time :P</li>
+</ol>
+<p>Leave your comments if you have any!</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/08/22/expand-menu-dropdown-if-viewing-parent-page-in-wordpress/" data-id="cij119tl6002p0rv2dmjhgfbo" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery/">jQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+    
+      <nav id="page-nav">
+        <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &raquo;</a>
+      </nav>
+    </section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/04/01/php-interfaces/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_thumb,f_auto,w_141/v1451972166/php-interfaces_t1edyb.png)" alt="PHP Interfaces" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+              <p class="item-title"><a href="/2015/04/01/php-interfaces/" class="title">PHP Interfaces</a></p>
+              <p class="item-date"><time datetime="2015-04-02T01:58:34.000Z" itemprop="datePublished">04.01.2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/04/01/build-hollow-box-css3/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_scale,f_auto,w_80/v1451972858/hollow-box-css3_fode75.png)" alt="Build A Hollow Box with CSS3" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2014/04/01/build-hollow-box-css3/" class="title">Build A Hollow Box with CSS3</a></p>
+              <p class="item-date"><time datetime="2014-04-02T06:08:40.000Z" itemprop="datePublished">04.01.2014</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/02/15/professional-wordpress-development-environments/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_center,h_80,w_80/v1451973585/wordpress-professional-tools_algehj.jpg)" alt="Professional WordPress Development Environments" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2014/02/15/professional-wordpress-development-environments/" class="title">Professional WordPress Development Environments</a></p>
+              <p class="item-date"><time datetime="2014-02-15T20:39:22.000Z" itemprop="datePublished">02.15.2014</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2013/07/02/adding-custom-post-types-to-omnisearch-in-jetpack/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_center,h_80,w_80/v1451973871/omnisearch-jetpack_rwawkz.png)" alt="Adding Custom Post Types to Omnisearch in Jetpack" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2013/07/02/adding-custom-post-types-to-omnisearch-in-jetpack/" class="title">Adding Custom Post Types to Omnisearch in Jetpack</a></p>
+              <p class="item-date"><time datetime="2013-07-03T06:05:57.000Z" itemprop="datePublished">07.02.2013</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2013/04/14/where-art-thou/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_east,h_80,w_80/v1451974471/where-art-thou_u9lu7w.jpg)" alt="Where Art Thou?" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2013/04/14/where-art-thou/" class="title">Where Art Thou?</a></p>
+              <p class="item-date"><time datetime="2013-04-14T18:24:05.000Z" itemprop="datePublished">04.14.2013</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/">Misc</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/Weekly-Word/">Weekly Word</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Plugins/">Plugins</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Quick-Tips/">Quick Tips</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Quick-Tips/Tutorial/">Tutorial</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Themes/">Themes</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Themes/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Weekly-Word/">Weekly Word</a><span class="category-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Announcements/">Announcements</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BuddyPress/">BuddyPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Classes/">Classes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Education/">Education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Presentations/">Presentations</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WooThemes/">WooThemes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress-Admin/">WordPress Admin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress-Editor/">WordPress Editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work-Shops/">Work Shops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/child-pages/">child pages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/child-theme/">child theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functions/">functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/htaccess/">htaccess</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jetpack/">jetpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/login-screen/">login screen</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/navigation/">navigation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/quick-tip/">quick tip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screencast/">screencast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">security</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shortcodes/">shortcodes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url-rewrites/">url rewrites</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Announcements/" style="font-size: 10px;">Announcements</a> <a href="/tags/BuddyPress/" style="font-size: 10px;">BuddyPress</a> <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/Classes/" style="font-size: 10px;">Classes</a> <a href="/tags/Education/" style="font-size: 10px;">Education</a> <a href="/tags/Presentations/" style="font-size: 10px;">Presentations</a> <a href="/tags/WooThemes/" style="font-size: 10px;">WooThemes</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/WordPress-Admin/" style="font-size: 10px;">WordPress Admin</a> <a href="/tags/WordPress-Editor/" style="font-size: 10px;">WordPress Editor</a> <a href="/tags/Work-Shops/" style="font-size: 10px;">Work Shops</a> <a href="/tags/child-pages/" style="font-size: 10px;">child pages</a> <a href="/tags/child-theme/" style="font-size: 10px;">child theme</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/functions/" style="font-size: 10px;">functions</a> <a href="/tags/htaccess/" style="font-size: 15px;">htaccess</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/jetpack/" style="font-size: 10px;">jetpack</a> <a href="/tags/login-screen/" style="font-size: 10px;">login screen</a> <a href="/tags/navigation/" style="font-size: 10px;">navigation</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/quick-tip/" style="font-size: 10px;">quick tip</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/screencast/" style="font-size: 10px;">screencast</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/shortcodes/" style="font-size: 10px;">shortcodes</a> <a href="/tags/url-rewrites/" style="font-size: 10px;">url rewrites</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2000 - 2016 Cole Geissinger<br>
+      Proudly powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

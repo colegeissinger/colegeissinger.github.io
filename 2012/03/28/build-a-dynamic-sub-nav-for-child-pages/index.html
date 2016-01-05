@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Build A Dynamic Sub-Nav for Child Pages | Cole Geissinger</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Recently I was faced with building a sub-nav menu that displays all the child pages contained in that parents menu. An example would be, say we a navigation menu called “Products”, and within that men">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Build A Dynamic Sub-Nav for Child Pages">
+<meta property="og:url" content="http://colegeissinger.com/2012/03/28/build-a-dynamic-sub-nav-for-child-pages/index.html">
+<meta property="og:site_name" content="Cole Geissinger">
+<meta property="og:description" content="Recently I was faced with building a sub-nav menu that displays all the child pages contained in that parents menu. An example would be, say we a navigation menu called “Products”, and within that men">
+<meta property="og:updated_time" content="2016-01-05T03:37:43.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Build A Dynamic Sub-Nav for Child Pages">
+<meta name="twitter:description" content="Recently I was faced with building a sub-nav menu that displays all the child pages contained in that parents menu. An example would be, say we a navigation menu called “Products”, and within that men">
+<meta name="twitter:creator" content="@colegeissinger">
+  
+  
+    <link rel="icon" href="favicon.png">
+  
+  
+ <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+
+
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-8990836-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="/" id="logo"><i class="logo" style="background-image: url(/css/images/cole-geissinger-logo.png)"></i><span class="site-title">Cole Geissinger</span></a>
+      <nav id="main-nav">
+        
+          <a class="main-nav-link" href="/.">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/tags">Tags</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+      </nav>
+      
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.gravatar.com/avatar/d298ef89fdd12d26cc14b9bf0cdec7aa"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+      
+      <div id="search-form-wrap">
+        
+          <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit"> </button><input type="hidden" name="sitesearch" value="http://colegeissinger.com"></form>
+        
+      </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tr>
+        
+          <td><a class="main-nav-link" href="/.">Home</a></td>
+        
+          <td><a class="main-nav-link" href="/archives">Archives</a></td>
+        
+          <td><a class="main-nav-link" href="/categories">Categories</a></td>
+        
+          <td><a class="main-nav-link" href="/tags">Tags</a></td>
+        
+          <td><a class="main-nav-link" href="/about">About</a></td>
+        
+        <td>
+          
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="http://colegeissinger.com"></form>
+          
+        </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+    <div class="outer">
+      
+        <aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      <img id="avatar" src="http://www.gravatar.com/avatar/d298ef89fdd12d26cc14b9bf0cdec7aa">
+      <h2 id="name">Cole Geissinger</h2>
+      <h3 id="title">CTO @ CropMobster</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>Santa Rosa, CA</span>
+      <a id="follow" href="https://github.com/colegeissinger">FOLLOW</a>
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        26
+        <span>posts</span>
+      </div>
+      <div class="article-info-block">
+        30
+        <span>tags</span>
+      </div>
+    </div>
+    
+    <div class="contact-info profile-block">
+      <table class="contact-list">
+        <tr>
+          
+          <td><a href="https://github.com/colegeissinger" target="_blank" title="github"><i class="fa fa-github"></i></a></td>
+          
+          <td><a href="https://twitter.com/ColeGeissinger" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></td>
+          
+          <td><a href="https://www.facebook.com/cole.geissinger" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></td>
+          
+        </tr>
+      </table>
+    </div>
+    
+    
+  </div>
+</aside>
+
+      
+      <section id="main"><article id="post-build-a-dynamic-sub-nav-for-child-pages" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Build A Dynamic Sub-Nav for Child Pages
+    </h1>
+  
+
+        <div class="article-meta">
+          
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2012/03/28/build-a-dynamic-sub-nav-for-child-pages/">
+      <time datetime="2012-03-28T23:39:06.000Z" itemprop="datePublished">03.28.2012</time>
+    </a>
+  </div>
+
+
+          
+  <div class="article-category">
+  	<i class="fa fa-folder"></i>
+    <a class="article-category-link" href="/categories/Tutorial/">Tutorial</a>
+  </div>
+
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+                
+        <p>Recently I was faced with building a sub-nav menu that displays all the child pages contained in that parents menu. An example would be, say we a navigation menu called “Products”, and within that menu is a list of child pages such as “Computers”, “TVs”, “Phones”. I needed to create a menu that would display all child pages of “Products” in a side bar menu. This would seem fairly straight forward in most cases, but if we add a third level to here, things get complicated.</p>
+<p>I put together a script that will, no matter the level of child pages, always return the list child pages from the main parent.</p>
+<p>Here’s the script –</p>
+<pre class="brush: php; gutter: true">&lt;?php
+    global $post;
+
+    if($post-&gt;post_parent) {
+        $parent_id = get_post_ancestors($post-&gt;ID);
+        $id = end($parent_id);
+    } else {
+        $id = $post-&gt;ID;
+    }
+    wp_list_pages(&#039;title_li=&amp;child_of=&#039; . $id);
+?&gt;</pre>
+
+<h2 id="Explanation-_3F"><a href="#Explanation-_3F" class="headerlink" title="Explanation..?"></a>Explanation..?</h2><p><pre class="brush: php; gutter: true">global $post;</pre><br>Since we are dealing with a sidebar navigation, we’ll be fetching post information outside of the <a href="http://codex.wordpress.org/The_Loop" title="The WordPress Loop" target="_blank" rel="external">loop</a>, we need to set the $post object scope to global. This will allow us to deal with the information retrieved by this WordPress object.</p>
+<p><pre class="brush: php; gutter: true">if($post-&gt;post<em>parent) {<br>   …<br>} else {<br>   …<br>}</em></pre><br>Next we need to set an if statement checking if the current $post<em> object has a Parent ID. The </em>$post<em> object holds all the specific information for each post. If </em>$post_ does contain a Parent ID, we will run some code, if not, we run a default.</p>
+<p><pre class="brush: php; gutter: true">$parent_ids = get_post_ancestors($post-&amp;gt;ID);<br>$id = end($parent<em>id);</em></pre><br>Now for the best part! If our if statement returns true with a parent ID this is the code we will run. We will use the <a href="http://codex.wordpress.org/Function_Reference/get_post_ancestors" title="Get Post Ancestors WordPress" target="_blank" rel="external">get_post_ancestors()</a><em> function to return an array of all the Parent ID’s for the current post. We will assign a variable called </em>$parent<em>ids</em> so we can refer to the data in a second.</p>
+<p>In the last line we will use the <em><a href="http://php.net/manual/en/function.end.php" target="_blank" rel="external">end()</a></em> function to grab the last ID in the _$parent<em>ids</em> array. The reason we do this is because the top most parent ID is always last in the array, so we will need that ID to display the child pages as we need to. Even if it returns one ID, we’ll still be able to return the correct parent ID. We then assign the <em>end()</em> function to a variable called <em>$id</em>.</p>
+<p><pre class="brush: php; gutter: true">$id = $post-&gt;ID;</pre><br>If our if statement returns false, we will just grab the current posts ID and assign it to a variable called <em>$id</em>.</p>
+<p><pre class="brush: php; gutter: true">wp_list_pages(&#039;title_li=&amp;child<em>of=&#039; . $id);</em></pre><br>And the last line of the whole script is the WordPress function <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages" target="_blank" rel="external">wp_list_pages()</a>_. This function can take a number of parameters, for the complete list, I highly suggest checking out the details at the WordPress Codex. We don’t need anything too extensive for this so we’ll be using two parameters, _title<em>li</em> and _child<em>of</em>. Let’s dig into what these parameters are exactly.</p>
+<ul>
+<li><strong>title_li</strong> - This parameter will set a title to the top of your menu. Assuming you want more control over the title of the function you can set your own title and enter this parameter with an empty value to have _wp_list<em>pages()</em> ignore a title. I normally prefer this method so I usually add this parameter. If you want to use it, just add a value or have WordPress add one for you by omitting this line completely in the function.</li>
+<li><strong>child_of</strong> - This is the bread and butter of the script. With this parameter we can feed a post ID here to return the child pages of this post ID. If the post ID doesn’t have any children, it will just return blank.<br>Now that we know what these parameters are, we can dive a little further into what we are doing. Inside the parenthesis of the _wp_list<em>pages()</em> function we will send a string containing our empty _title<em>li</em> and _child<em>of</em> parameters, separating each with an ampersand. Since we don’t want to use a title we’ll define _title<em>li</em> with a blank value (_title<em>li=</em>). Lastly we will add _child<em>of</em> at the end (placement isn’t really required for it to work) and concatenate our <em>$id</em> variable into the value area (_child<em>of=’ . $id</em>). Concatenating is a PHP operator that will allow us to attach variables, functions to strings. We first need to close the string by adding the single quote after the equal sign, then use the period (.) to attach our <em>$id</em> variable to it.</li>
+</ul>
+<p>And that’s it! Let me know what your thoughts are or if there are any questions about the script.</p>
+<p>&nbsp;</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://colegeissinger.com/2012/03/28/build-a-dynamic-sub-nav-for-child-pages/" data-id="cij119tlk003r0rv2rkp7crq6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/child-pages/">child pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/navigation/">navigation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/04/20/quick-tip-easy-wordpress-login-url/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Quick Tip: Easy WordPress Login URL
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/03/12/creating-a-wordpress-child-theme/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Creating A WordPress Child Theme</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+</section>
+      
+        <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">recents</h3>
+    <div class="widget">
+      <ul id="recent-post" class="">
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2015/04/01/php-interfaces/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_thumb,f_auto,w_141/v1451972166/php-interfaces_t1edyb.png)" alt="PHP Interfaces" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/PHP/">PHP</a></p>
+              <p class="item-title"><a href="/2015/04/01/php-interfaces/" class="title">PHP Interfaces</a></p>
+              <p class="item-date"><time datetime="2015-04-02T01:58:34.000Z" itemprop="datePublished">04.01.2015</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/04/01/build-hollow-box-css3/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_scale,f_auto,w_80/v1451972858/hollow-box-css3_fode75.png)" alt="Build A Hollow Box with CSS3" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2014/04/01/build-hollow-box-css3/" class="title">Build A Hollow Box with CSS3</a></p>
+              <p class="item-date"><time datetime="2014-04-02T06:08:40.000Z" itemprop="datePublished">04.01.2014</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2014/02/15/professional-wordpress-development-environments/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_center,h_80,w_80/v1451973585/wordpress-professional-tools_algehj.jpg)" alt="Professional WordPress Development Environments" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2014/02/15/professional-wordpress-development-environments/" class="title">Professional WordPress Development Environments</a></p>
+              <p class="item-date"><time datetime="2014-02-15T20:39:22.000Z" itemprop="datePublished">02.15.2014</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2013/07/02/adding-custom-post-types-to-omnisearch-in-jetpack/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_center,h_80,w_80/v1451973871/omnisearch-jetpack_rwawkz.png)" alt="Adding Custom Post Types to Omnisearch in Jetpack" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2013/07/02/adding-custom-post-types-to-omnisearch-in-jetpack/" class="title">Adding Custom Post Types to Omnisearch in Jetpack</a></p>
+              <p class="item-date"><time datetime="2013-07-03T06:05:57.000Z" itemprop="datePublished">07.02.2013</time></p>
+            </div>
+          </li>
+        
+          <li>
+            
+            <div class="item-thumbnail">
+              <a href="/2013/04/14/where-art-thou/" class="thumbnail">
+  
+    <span style="background-image:url(https://res.cloudinary.com/dcc7lcoel/image/upload/c_lfill,g_east,h_80,w_80/v1451974471/where-art-thou_u9lu7w.jpg)" alt="Where Art Thou?" class="thumbnail-image"></span>
+  
+</a>
+            </div>
+            
+            <div class="item-inner">
+              <p class="item-category"><a class="article-category-link" href="/categories/Misc/">Misc</a></p>
+              <p class="item-title"><a href="/2013/04/14/where-art-thou/" class="title">Where Art Thou?</a></p>
+              <p class="item-date"><time datetime="2013-04-14T18:24:05.000Z" itemprop="datePublished">04.14.2013</time></p>
+            </div>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/">Javascript</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Javascript/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/">Misc</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Misc/Weekly-Word/">Weekly Word</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/PHP/">PHP</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Plugins/">Plugins</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Quick-Tips/">Quick Tips</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Quick-Tips/Tutorial/">Tutorial</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Themes/">Themes</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Themes/Tutorial/">Tutorial</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tutorial/">Tutorial</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Weekly-Word/">Weekly Word</a><span class="category-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Announcements/">Announcements</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BuddyPress/">BuddyPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Canvas/">Canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Classes/">Classes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Education/">Education</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Presentations/">Presentations</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WooThemes/">WooThemes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress/">WordPress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress-Admin/">WordPress Admin</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WordPress-Editor/">WordPress Editor</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work-Shops/">Work Shops</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/child-pages/">child pages</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/child-theme/">child theme</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css3/">css3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functions/">functions</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/htaccess/">htaccess</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/">jQuery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jetpack/">jetpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/login-screen/">login screen</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/navigation/">navigation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/quick-tip/">quick tip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/">sass</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screencast/">screencast</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/security/">security</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shortcodes/">shortcodes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/url-rewrites/">url rewrites</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">tag cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Announcements/" style="font-size: 10px;">Announcements</a> <a href="/tags/BuddyPress/" style="font-size: 10px;">BuddyPress</a> <a href="/tags/Canvas/" style="font-size: 10px;">Canvas</a> <a href="/tags/Classes/" style="font-size: 10px;">Classes</a> <a href="/tags/Education/" style="font-size: 10px;">Education</a> <a href="/tags/Presentations/" style="font-size: 10px;">Presentations</a> <a href="/tags/WooThemes/" style="font-size: 10px;">WooThemes</a> <a href="/tags/WordPress/" style="font-size: 10px;">WordPress</a> <a href="/tags/WordPress-Admin/" style="font-size: 10px;">WordPress Admin</a> <a href="/tags/WordPress-Editor/" style="font-size: 10px;">WordPress Editor</a> <a href="/tags/Work-Shops/" style="font-size: 10px;">Work Shops</a> <a href="/tags/child-pages/" style="font-size: 10px;">child pages</a> <a href="/tags/child-theme/" style="font-size: 10px;">child theme</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/css3/" style="font-size: 10px;">css3</a> <a href="/tags/functions/" style="font-size: 10px;">functions</a> <a href="/tags/htaccess/" style="font-size: 15px;">htaccess</a> <a href="/tags/html/" style="font-size: 10px;">html</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/jetpack/" style="font-size: 10px;">jetpack</a> <a href="/tags/login-screen/" style="font-size: 10px;">login screen</a> <a href="/tags/navigation/" style="font-size: 10px;">navigation</a> <a href="/tags/php/" style="font-size: 20px;">php</a> <a href="/tags/quick-tip/" style="font-size: 10px;">quick tip</a> <a href="/tags/sass/" style="font-size: 10px;">sass</a> <a href="/tags/screencast/" style="font-size: 10px;">screencast</a> <a href="/tags/security/" style="font-size: 10px;">security</a> <a href="/tags/shortcodes/" style="font-size: 10px;">shortcodes</a> <a href="/tags/url-rewrites/" style="font-size: 10px;">url rewrites</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03/">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/02/">February 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/12/">December 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/11/">November 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09/">September 2012</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/08/">August 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/07/">July 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04/">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03/">March 2012</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+  <div id="toTop" class="fa fa-chevron-up"></div>
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2000 - 2016 Cole Geissinger<br>
+      Proudly powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+    </div>
+  </div>
+</footer>
+
+    
+
+
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
