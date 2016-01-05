@@ -190,7 +190,7 @@ ga('send', 'pageview');
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://colegeissinger.com/2012/07/30/wordpress-workshops-aug-2012/" data-id="cij119tjx000d0rv2bnff3vmy" class="article-share-link">Share</a>
+      <a data-url="http://colegeissinger.com/2012/07/30/wordpress-workshops-aug-2012/" data-id="cij120jgq000dg1v2pvswf3h9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Classes/">Classes</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Education/">Education</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Presentations/">Presentations</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WordPress/">WordPress</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Work-Shops/">Work Shops</a></li></ul>
@@ -285,7 +285,7 @@ Just add this to your stylesheet, and by adding the class to the parent element 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://colegeissinger.com/2012/05/11/center-the-ul-tag-with-floated-li-element/" data-id="cij119tlf003i0rv22hnbbbyk" class="article-share-link">Share</a>
+      <a data-url="http://colegeissinger.com/2012/05/11/center-the-ul-tag-with-floated-li-element/" data-id="cij120ji0003ig1v280gx97s6" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/quick-tip/">quick tip</a></li></ul>
@@ -348,7 +348,7 @@ RewriteRule ^login(.*)$ wp-login.php$1</pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://colegeissinger.com/2012/04/20/quick-tip-easy-wordpress-login-url/" data-id="cij119tkw001z0rv2sdbrw48p" class="article-share-link">Share</a>
+      <a data-url="http://colegeissinger.com/2012/04/20/quick-tip-easy-wordpress-login-url/" data-id="cij120jhh001zg1v2v3hgfmcn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/htaccess/">htaccess</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/login-screen/">login screen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/url-rewrites/">url rewrites</a></li></ul>
@@ -398,36 +398,24 @@ RewriteRule ^login(.*)$ wp-login.php$1</pre>
                 
         <p>Recently I was faced with building a sub-nav menu that displays all the child pages contained in that parents menu. An example would be, say we a navigation menu called “Products”, and within that menu is a list of child pages such as “Computers”, “TVs”, “Phones”. I needed to create a menu that would display all child pages of “Products” in a side bar menu. This would seem fairly straight forward in most cases, but if we add a third level to here, things get complicated.</p>
 <p>I put together a script that will, no matter the level of child pages, always return the list child pages from the main parent.</p>
-<p>Here’s the script –</p>
-<pre class="brush: php; gutter: true">&lt;?php
-    global $post;
-
-    if($post-&gt;post_parent) {
-        $parent_id = get_post_ancestors($post-&gt;ID);
-        $id = end($parent_id);
-    } else {
-        $id = $post-&gt;ID;
-    }
-    wp_list_pages(&#039;title_li=&amp;child_of=&#039; . $id);
-?&gt;</pre>
-
-<h2 id="Explanation-_3F"><a href="#Explanation-_3F" class="headerlink" title="Explanation..?"></a>Explanation..?</h2><p><pre class="brush: php; gutter: true">global $post;</pre><br>Since we are dealing with a sidebar navigation, we’ll be fetching post information outside of the <a href="http://codex.wordpress.org/The_Loop" title="The WordPress Loop" target="_blank" rel="external">loop</a>, we need to set the $post object scope to global. This will allow us to deal with the information retrieved by this WordPress object.</p>
-<p><pre class="brush: php; gutter: true">if($post-&gt;post<em>parent) {<br>   …<br>} else {<br>   …<br>}</em></pre><br>Next we need to set an if statement checking if the current $post<em> object has a Parent ID. The </em>$post<em> object holds all the specific information for each post. If </em>$post_ does contain a Parent ID, we will run some code, if not, we run a default.</p>
-<p><pre class="brush: php; gutter: true">$parent_ids = get_post_ancestors($post-&amp;gt;ID);<br>$id = end($parent<em>id);</em></pre><br>Now for the best part! If our if statement returns true with a parent ID this is the code we will run. We will use the <a href="http://codex.wordpress.org/Function_Reference/get_post_ancestors" title="Get Post Ancestors WordPress" target="_blank" rel="external">get_post_ancestors()</a><em> function to return an array of all the Parent ID’s for the current post. We will assign a variable called </em>$parent<em>ids</em> so we can refer to the data in a second.</p>
-<p>In the last line we will use the <em><a href="http://php.net/manual/en/function.end.php" target="_blank" rel="external">end()</a></em> function to grab the last ID in the _$parent<em>ids</em> array. The reason we do this is because the top most parent ID is always last in the array, so we will need that ID to display the child pages as we need to. Even if it returns one ID, we’ll still be able to return the correct parent ID. We then assign the <em>end()</em> function to a variable called <em>$id</em>.</p>
-<p><pre class="brush: php; gutter: true">$id = $post-&gt;ID;</pre><br>If our if statement returns false, we will just grab the current posts ID and assign it to a variable called <em>$id</em>.</p>
-<p><pre class="brush: php; gutter: true">wp_list_pages(&#039;title_li=&amp;child<em>of=&#039; . $id);</em></pre><br>And the last line of the whole script is the WordPress function <a href="http://codex.wordpress.org/Function_Reference/wp_list_pages" target="_blank" rel="external">wp_list_pages()</a>_. This function can take a number of parameters, for the complete list, I highly suggest checking out the details at the WordPress Codex. We don’t need anything too extensive for this so we’ll be using two parameters, _title<em>li</em> and _child<em>of</em>. Let’s dig into what these parameters are exactly.</p>
+<p>Here’s the script –<br><script src="//gist.github.com/3c004191af7fe206a68a.js?file=build-a-dynamic-sub-nav-for-child-pages.php"></script></p>
+<h2 id="Explanation-_3F"><a href="#Explanation-_3F" class="headerlink" title="Explanation..?"></a>Explanation..?</h2><script src="//gist.github.com/3e1eaf30c07aa61e67e0.js?file=build-a-dynamic-sub-nav-for-child-pages.php"></script>
+<p>Since we are dealing with a sidebar navigation, we’ll be fetching post information outside of the <a href="http://codex.wordpress.org/The_Loop" title="The WordPress Loop" target="_blank" rel="external">loop</a>, we need to set the $post object scope to global. This will allow us to deal with the information retrieved by this WordPress object.<br><script src="//gist.github.com/b68b45474777f883f830.js?file=build-a-dynamic-sub-nav-for-child-pages.php"></script></p>
+<p>Next we need to set an if statement checking if the current <em>$post</em> object has a Parent ID. The <em>$post</em> object holds all the specific information for each post. If <em>$post</em> does contain a Parent ID, we will run some code, if not, we run a default.<br><script src="//gist.github.com/a071a570273aab0955fe.js?file=build-a-dynamic-sub-nav-for-child-pages.php"></script></p>
+<p>Now for the best part! If our if statement returns true with a parent ID this is the code we will run. We will use the _<a href="http://codex.wordpress.org/Function_Reference/get_post_ancestors" title="Get Post Ancestors WordPress" target="_blank" rel="external">get_post_ancestors()</a><em> function to return an array of all the Parent ID’s for the current post. We will assign a variable called </em>$parent<em>ids</em> so we can refer to the data in a second.</p>
+<p>In the last line we will use the <em><a href="http://php.net/manual/en/function.end.php" target="_blank" rel="external">end()</a></em> function to grab the last ID in the _$parent<em>ids</em> array. The reason we do this is because the top most parent ID is always last in the array, so we will need that ID to display the child pages as we need to. Even if it returns one ID, we’ll still be able to return the correct parent ID. We then assign the <em>end()</em> function to a variable called <em>$id</em>.<br><script src="//gist.github.com/1b717c3e260d45ee054e.js?file=build-a-dynamic-sub-nav-for-child-pages.php"></script></p>
+<p>If our if statement returns false, we will just grab the current posts ID and assign it to a variable called <em>$id</em>.<br><script src="//gist.github.com/ca6cb45962fc7ba9054a.js?file=build-a-dynamic-sub-nav-for-child-pages.php"></script></p>
+<p>And the last line of the whole script is the WordPress function _<a href="http://codex.wordpress.org/Function_Reference/wp_list_pages" target="_blank" rel="external">wp_list_pages()</a>_. This function can take a number of parameters, for the complete list, I highly suggest checking out the details at the WordPress Codex. We don’t need anything too extensive for this so we’ll be using two parameters, _title<em>li</em> and _child<em>of</em>. Let’s dig into what these parameters are exactly.</p>
 <ul>
 <li><strong>title_li</strong> - This parameter will set a title to the top of your menu. Assuming you want more control over the title of the function you can set your own title and enter this parameter with an empty value to have _wp_list<em>pages()</em> ignore a title. I normally prefer this method so I usually add this parameter. If you want to use it, just add a value or have WordPress add one for you by omitting this line completely in the function.</li>
 <li><strong>child_of</strong> - This is the bread and butter of the script. With this parameter we can feed a post ID here to return the child pages of this post ID. If the post ID doesn’t have any children, it will just return blank.<br>Now that we know what these parameters are, we can dive a little further into what we are doing. Inside the parenthesis of the _wp_list<em>pages()</em> function we will send a string containing our empty _title<em>li</em> and _child<em>of</em> parameters, separating each with an ampersand. Since we don’t want to use a title we’ll define _title<em>li</em> with a blank value (_title<em>li=</em>). Lastly we will add _child<em>of</em> at the end (placement isn’t really required for it to work) and concatenate our <em>$id</em> variable into the value area (_child<em>of=’ . $id</em>). Concatenating is a PHP operator that will allow us to attach variables, functions to strings. We first need to close the string by adding the single quote after the equal sign, then use the period (.) to attach our <em>$id</em> variable to it.</li>
 </ul>
 <p>And that’s it! Let me know what your thoughts are or if there are any questions about the script.</p>
-<p>&nbsp;</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://colegeissinger.com/2012/03/28/build-a-dynamic-sub-nav-for-child-pages/" data-id="cij119tlk003r0rv2rkp7crq6" class="article-share-link">Share</a>
+      <a data-url="http://colegeissinger.com/2012/03/28/build-a-dynamic-sub-nav-for-child-pages/" data-id="cij120ji5003rg1v210nsxzb3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/child-pages/">child pages</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/navigation/">navigation</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
@@ -530,7 +518,7 @@ Our style.css should now look like this
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://colegeissinger.com/2012/03/12/creating-a-wordpress-child-theme/" data-id="cij119tlc00360rv2qkddvtdz" class="article-share-link">Share</a>
+      <a data-url="http://colegeissinger.com/2012/03/12/creating-a-wordpress-child-theme/" data-id="cij120jhy0036g1v2ym4wa6z9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/child-theme/">child theme</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/functions/">functions</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
@@ -584,7 +572,7 @@ Our style.css should now look like this
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://colegeissinger.com/2012/03/04/welcome-to-colegeissinger-com/" data-id="cij119tk700180rv273rt9xkp" class="article-share-link">Share</a>
+      <a data-url="http://colegeissinger.com/2012/03/04/welcome-to-colegeissinger-com/" data-id="cij120jh20018g1v2y2ocmrm2" class="article-share-link">Share</a>
       
       
     </footer>
